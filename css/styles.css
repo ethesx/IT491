@@ -1,4 +1,36 @@
 .pageTitle{
     text-align: center;
-    font-size: 14px;
+    font-size: 1.2em;
+}
+
+.ui-body, .ui-body label{
+    font-size:.9em;
+}
+
+.ui-body label{
+    font-weight: bold;
+}
+
+#defAddr .ui-field-contain .ui-block-a {
+    width:90% !important;
+}
+#defAddr .ui-field-contain .ui-block-b{
+    width:10% !important;
+}
+
+.transparent {
+    border: none !important;
+    border-color: transparent !important;
+    margin:0 !important;
+    border-width:0 !important;
+
+}
+
+input[type="text"]:disabled {
+    background: transparent;
+    color: inherit;
+}
+
+.footBtn{
+    margin-top:2em;
 }
