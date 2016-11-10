@@ -11,10 +11,10 @@
     font-weight: bold;
 }
 
-#defAddr .ui-field-contain .ui-block-a {
+#defAddr .ui-field-contain .ui-block-a, #defContactInfo .ui-field-contain .ui-block-a {
     width:90% !important;
 }
-#defAddr .ui-field-contain .ui-block-b{
+#defAddr .ui-field-contain .ui-block-b, #defContactInfo .ui-field-contain .ui-block-b{
     width:10% !important;
 }
 
