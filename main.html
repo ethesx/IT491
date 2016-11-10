@@ -21,9 +21,54 @@
 
 <body >
 
+<div data-role="page" data-theme="a" id="login" >
+    <div data-role="header" class="ui-shadow">
+        <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back"></a>
+        <img border="0" src="images/state.png" alt="Logo, State" style="float:right;display:inline"/>
+        <h1><font color="#01498f">New Jersey Courts<br/>Pre-Trial Monitoring</font></h1>
+    </div>
+
+    <div style="background-color: #52B480; padding:100px 50px 50px 50px;"></div>
+    <div id="wrap" style="background-color: #FFF; border-radius:25px;">
+        <div data-role="main" class="ui-content">
+            <input type="text" name="txt-email" id="txt-email" value="User ID" style="text-align: center;">
+            <input type="password" name="txt-password" id="txt-password" value="Password" style="text-align: center;">
+
+            <a href="#defList" id="btn-login" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5"style="background-color: #52B480; color:white; text-shadow:0 0 0;">Log In</a>
+
+            <label for="txt-password" style="text-align: center; color:gray; text-shadow:0 0 0;">Forgot User ID or Password?</label>
+
+            <!--
+            <a href="#dlg-invalid-credentials" data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Submit</a>
+            -->
+
+            <div data-role="popup" id="dlg-invalid-credentials" data-dismissible="false" style="max-width:400px;">
+                <div role="main" class="ui-content">
+                    <h3 class="mc-text-danger">Login Failed</h3>
+                    <p>Did you enter the right credentials?</p>
+                    <div class="mc-text-center"><a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <label for="login" style="text-align: center; color:white; text-shadow:0 0 0; padding-top: 100px;">Contact Help Desk</label>
+
+    <div class="ui-grid-a">
+        <div class="ui-block-a">
+            <a href="#" class="ui-btn ui-btn-a ui-corner-all ui-shadow" id="btn_call">Call</a><br>
+        </div>
+
+        <div class="ui-block-b">
+            <a href="#" class="ui-btn ui-btn-a ui-corner-all ui-shadow" id="btn_email">Email</a><br>
+        </div>
+    </div>
+</div>
+
 <div data-role="page" data-theme="a" id="defList" >
     <div data-role="header" class="ui-shadow">
         <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back"></a>
+        <img border="0" src="images/state.png" alt="Logo, State" style="float:right;display:inline"/>
         <h1><font color="#01498f">New Jersey Courts<br/>Pre-Trial Monitoring</font></h1>
     </div>
 
@@ -48,30 +93,201 @@
             <li><a href="#">Thomas, Chloe</a></li>
             <li><a href="#">Wilson, Billy</a></li>
         </ul>
-
         <a href="#alerts" class="ui-btn ui-shadow ui-corner-all">Continue</a>
     </div>
 </div>
 
 <div data-role="page" data-theme="a" id="alerts" >
-    <div data-role="header" class="ui-shadow">
-
+    <div data-role="header" class="ui-shadow" style="text-align:center;">
+        <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back"></a>
+        <img border="0" src="images/state.png" alt="Logo, State" style="float:right;display:inline"/>
+        <h1><font color="#01498f">New Jersey Courts<br/>Pre-Trial Monitoring</font></h1>
     </div>
 
     <div data-role="main" class="ui-content">
-        <h2>Alerts</h2>
-
+        <table style="background-color: white; text-shadow:0 0 0; color: black; border-radius: 25px;" data-role="table" class="ui-responsive ui-shadow" id="review">
+            <thead>
+            <tr style="border: none;">
+                <th style="text-align: center;">Review the following alerts<br/>before advancing</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr style="border: none;">
+                <td style="border: none; text-align: center;"></td>
+            </tr>
+            </tbody>
+        </table>
+        <div style="padding: 10px;"></div>
+        <table style="background-color: white; border: 1px solid #000; text-shadow:0 0 0; color: black;" data-role="table" data-mode="columntoggle" class="ui-responsive ui-shadow" id="myTable">
+            <thead>
+            <tr style="background-color: #52b480; border: 3px solid white;">
+                <th style="text-align: center;" data-priority="3">Alert ID</th>
+                <th style="text-align	: center;">Date</th>
+                <th style="text-align: center;">Alert</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr style="border: 3px solid white;">
+                <td style="border-right: 1px solid black;">1</td>
+                <td style="border-right: 1px solid black;">9/28/2016</td>
+                <td style="border-right: 1px solid black;">Alert - New case is PROMIS/Gavel matched to defendant's SBI #<br/>County: ATL<br/>Case #: ATL-16-000232</td>
+            </tr>
+            <tr style="border: 3px solid white;">
+                <td style="border-right: 1px solid black;">2</td>
+                <td style="border-right: 1px solid black;">9/28/2016</td>
+                <td style="border-right: 1px solid black;">Alert - New case is PROMIS/Gavel matched to defendant's SBI #<br/>County: ATL<br/>Case #: ATL-16-000232</td>
+            </tr>
+            </tbody>
+        </table>
+        <a href="#defInfo" id="btn-submit" class="ui-btn ui-btn-a ui-corner-all mc-top-margin-1-5">Begin Interview</a>
     </div>
 </div>
 
 <div data-role="page" data-theme="a" id="defInfo" >
-    <div data-role="header" class="ui-shadow">
-
+    <div data-role="header" class="ui-shadow" style="text-align:center;">
+        <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back"></a>
+        <img border="0" src="images/state.png" alt="Logo, State" style="float:right;display:inline"/>
+        <h1><font color="#01498f">New Jersey Courts<br/>Pre-Trial Monitoring</font></h1>
     </div>
 
+    <div style="text-align: center; font-weight: normal; font-size: large; padding-top: 10px;">Defendant Information</div>
     <div data-role="main" class="ui-content">
-        <h2>Defendant Information</h2>
-
+        <table style="background-color: white; border-radius: 15px; text-shadow:0 0 0; color: black;" data-role="table" data-mode="columntoggle" class="ui-responsive">
+            <thead>
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><fieldset class="ui-field-contain"><label for="fullname">First name:</label><input style="color: black;" class="ui-disabled" type="text" data-mini="true" name="fullname" id="fullname" value="David"></fieldset></td>
+                <td><a href="#" data-role="button" id="editFull" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
+            </tr>
+            <tr>
+                <td><fieldset class="ui-field-contain"><label for="middlename">Middle name:</label><input type="text" data-mini="true" name="middlename" id="middlename" value=""></fieldset></td>
+                <td><a href="#" data-role="button" id="editMiddle" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
+            </tr>
+            <tr>
+                <td><fieldset class="ui-field-contain"><label for="lastname">Last name:</label><input type="text" data-mini="true" name="lastname" id="lastname" value="Court"></fieldset></td>
+                <td><a href="#" data-role="button" id="editLast" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
+            </tr>
+            <tr>
+                <td><fieldset class="ui-field-contain"><label for="dob">Date of Birth:</label><input type="date" data-mini="true" name="dob" id="dob" value="1990-03-14"></fieldset></td>
+                <td><a href="#" data-role="button" id="editDOB" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset class="ui-field-contain">
+                        <label for="gender">Gender:</label>
+                        <select name="gender" id="gender" class="ui-disabled" data-mini="true">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </fieldset>
+                </td>
+                <td><a href="#" data-role="button" id="editGender" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="ui-field-contain" data-mini="true">
+                        <fieldset data-role="controlgroup">
+                            <legend>Height:</legend>
+                            <label for="feet"></label>
+                            <input type="text" name="feet" id="feet" value="5" data-mini="true">
+                            <label for="inch"></label>
+                            <input type="text" name="inch" id="inch" value="11" data-mini="true">
+                        </fieldset>
+                    </div>
+                <td><a href="#" data-role="button" id="editHeight" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
+            </tr>
+            <tr>
+                <td><fieldset class="ui-field-contain"><label for="weight">Weight:</label><input type="number" name="weight" id="weight" value="210"></fieldset></td>
+                <td><a href="#" data-role="button" id="editWeight" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset class="ui-field-contain">
+                        <label for="eyeColor">Eye Color:</label>
+                        <select name="eyeColor" id="eyeColor" data-mini="true">
+                            <option value="brown">Brown</option>
+                            <option value="black">Black</option>
+                            <option value="hazel">Hazel</option>
+                            <option value="blue">Blue</option>
+                            <option value="grey">Grey</option>
+                            <option value="green">Green</option>
+                        </select>
+                    </fieldset>
+                </td>
+                <td><a href="#" data-role="button" id="editEye" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset class="ui-field-contain">
+                        <label for="race">Race:</label>
+                        <select name="race" id="race" data-mini="true">
+                            <option value="indian">American Indian or Alaska Native</option>
+                            <option value="asian">Asian</option>
+                            <option value="african">Black or African American</option>
+                            <option value="pacific">Native Hawaiian or Other Pacific</option>
+                            <option value="white">White</option>
+                            <option value="latino">Hispanic or Latino</option>
+                        </select>
+                    </fieldset>
+                </td>
+                <td><a href="#" data-role="button" id="editRace" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset class="ui-field-contain">
+                        <label for="hairColor">Hair Color:</label>
+                        <input style="color: black;" type="text" data-mini="true" name="hairColor" id="hairColor" value="Brown">
+                    </fieldset>
+                </td>
+                <td><a href="#" data-role="button" id="editHair" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset class="ui-field-contain">
+                        <label for="inter">Interpreter Needed:</label>
+                        <select name="inter" id="inter" data-mini="true">
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                        </select>
+                    </fieldset>
+                </td>
+                <td><a href="#" data-role="button" id="editInter" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset class="ui-field-contain">
+                        <label for="marks">Marks:</label>
+                        <textarea name="marks" id="marks">Tattoo - L neck, sparrow Tattoo - L&R hands X with rat head</textarea>
+                    </fieldset>
+                </td>
+                <td><a href="#" data-role="button" id="editMarks" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset class="ui-field-contain">
+                        <label for="ssn">SSN:</label>
+                        <input style="color: black;" type="text" data-mini="true" name="ssn" id="ssn" value="***-***-5555">
+                    </fieldset>
+                </td>
+                <td><a href="#" data-role="button" id="editSSN" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset class="ui-field-contain">
+                        <label for="caps">CAPS ID:</label>
+                        <input style="color: black;" type="number" data-mini="true" name="ssn" id="caps" value="67856423">
+                    </fieldset>
+                </td>
+                <td><a href="#" data-role="button" id="editCaps" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
+            </tr>
+            </tbody>
+        </table>
+        <a href="#defAddr" id="btn-info" class="ui-btn ui-btn-a ui-corner-all mc-top-margin-1-5">Continue</a>
     </div>
 </div>
 
@@ -342,7 +558,7 @@
 
     <div data-role="main" class="ui-content">
         <h2>Monitoring Conditions</h2>
-
+        <a href="#schedule" id="btn-compliance" class="ui-btn ui-btn-a ui-corner-all mc-top-margin-1-5">Continue</a>
     </div>
 </div>
 
@@ -353,19 +569,19 @@
 
     <div data-role="main" class="ui-content">
         <h2>Scheduling</h2>
-			<p>	<label><b>Do you need to schedule an appointment for the defendent?</b></label>
-				<select name="flip-1" id="flip-1" data-role="slider">
-					<option value="no">NO</option>
-					<option value="yes">YES</option>
-				</select><br><br>
-				
-				<label><b>Did you review the schedule with the defendant?</b></label>
-				<select name="flip-1" id="flip-1" data-role="slider">
-					<option value="no">NO</option>
-					<option value="yes">YES</option>
-				</select><br><br>
-			</p>
-			<a href="#summary" class="ui-btn ui-shadow ui-corner-all">Continue</a>
+        <p>	<label><b>Do you need to schedule an appointment for the defendent?</b></label>
+            <select name="flip-1" id="flip-1" data-role="slider">
+                <option value="no">NO</option>
+                <option value="yes">YES</option>
+            </select><br><br>
+
+            <label><b>Did you review the schedule with the defendant?</b></label>
+            <select name="flip-2" id="flip-2" data-role="slider">
+                <option value="no">NO</option>
+                <option value="yes">YES</option>
+            </select><br><br>
+        </p>
+        <a href="#summary" id="btn-schedule" class="ui-btn ui-btn-a ui-corner-all mc-top-margin-1-5">Continue</a>
     </div>
 </div>
 
@@ -376,8 +592,8 @@
 
     <div data-role="main" class="ui-content">
         <h2>Interview Summary</h2>
-		
-		<a href="#confirmation" class="ui-btn ui-shadow ui-corner-all">Complete Interview</a>
+
+        <a href="#confirmation" class="ui-btn ui-btn-a ui-corner-all mc-top-margin-1-5">Complete Interview</a>
     </div>
 </div>
 
@@ -388,9 +604,8 @@
 
     <div data-role="main" class="ui-content">
         <h2>Confirmation</h2>
-		<a href="#defList" class="ui-btn ui-shadow ui-corner-all">Return to Defendant List</a><br><br>
-		<a href="index.html" class="ui-btn ui-shadow ui-corner-all">Logout</a>
-
+        <a href="#defList" class="ui-btn ui-btn-a ui-corner-all mc-top-margin-1-5">Return to Defendant List</a><br><br>
+        <a href="main.html" class="ui-btn ui-btn-a ui-corner-all mc-top-margin-1-5">Logout</a>
     </div>
 </div>
 
