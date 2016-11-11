@@ -3,6 +3,11 @@
     font-size: 1.2em;
 }
 
+.pageSubTitle{
+    text-align: center;
+    font-size: 1em;
+}
+
 .ui-body, .ui-body label{
     font-size:.9em;
 }
@@ -33,4 +38,27 @@ input[type="text"]:disabled {
 
 .footBtn{
     margin-top:2em;
+}
+
+#complianceItems{
+    margin-top:40px;
+}
+
+#compliance .footBtn{
+    margin-left:16px;
+    margin-right:16px;
+}
+
+#compliance .ui-btn {
+    white-space: normal;
+    text-align: center;
+}
+
+#compliance .ui-content{
+    width:100%;
+    padding:0;
+}
+
+.nonCompliant {
+    background: #980000 !important;
 }
