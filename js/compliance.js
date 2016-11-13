@@ -1,6 +1,7 @@
 var controlGroupName = "#complianceItems";
 var cases = data[dataIndexSelected].Case;
 var group = $( controlGroupName );
+/*
 
 $(document).bind('pagecreate', "#compliance", function(e, data){
     var conditions;
@@ -31,4 +32,4 @@ $(document).bind('pagecreate', "#compliance", function(e, data){
     group.controlgroup("refresh");
 
     //TODO how is the compliance item to be posted back as selected - by name, index, etc?
-});
+});*/
