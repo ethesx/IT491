@@ -11,10 +11,11 @@
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
             crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/data.js"></script>
     <script src="js/address.js"></script>
     <script src="js/contact.js"></script>
     <script src="js/compliance.js"></script>
-    <script src="js/data.js"></script>
+
 </head>
 
 <style>
@@ -567,11 +568,23 @@
         <!--TODO Need list of values to indicate -->
         <!--TODO Create JS to dynamically create buttons based on conditions -->
         <!--TODO Fix highlight color on click -->
-        <div data-role="controlgroup" data-theme="b" id="complianceItems">
+       <!-- <div data-role="controlgroup" data-theme="b" id="complianceItems">
             <input data-corners="false" value="Refrain from getting arrested" type="button" name="mc1" id="mc1" >
             <input data-corners="false" value="Maintain active employment" type="button" name="mc2" id="mc2">
             <input data-corners="false" value="Maintain active employment, or actively seek employment" type="button" name="mc3" id="mc3">
-        </div>
+        </div>-->
+
+
+
+            <fieldset data-role="controlgroup" id="complianceItems">
+                <!--<input name="mc1" id="mc1" type="checkbox">
+                <label for="mc1">Refrain from getting arrested</label>
+                <input name="mc2" id="mc2" type="checkbox">
+                <label for="mc2">Maintain active employment</label>
+                <input name="mc3" id="mc3" type="checkbox">
+                <label for="mc3">Maintain active employment, or actively seek employment</label>-->
+            </fieldset>
+
 
         <a href="#schedule" class="ui-btn ui-mini ui-shadow ui-corner-all footBtn">Continue</a>
     </div>
