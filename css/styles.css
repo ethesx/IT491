@@ -40,7 +40,7 @@ input[type="text"]:disabled {
     margin-top:2em;
 }
 
-#complianceItems{
+#complianceDiv{
     margin-top:40px;
 }
 
@@ -57,4 +57,18 @@ input[type="text"]:disabled {
 #compliance .ui-content{
     width:100%;
     padding:0;
+}
+
+#complianceDiv .ui-li-divider {
+    -webkit-border-bottom-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    -webkit-border-bottom-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+#complianceDiv div .ui-first-child  {
+    -webkit-border-top-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    -webkit-border-top-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
 }
