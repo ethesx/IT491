@@ -1,4 +1,4 @@
-$(document).bind('pagecreate', function(){
+$(document).on('pagecreate', "#defAddr", function(){
     $('#address1 #address2 #city #zip').parent().removeClass('ui-input-text ui-shadow-inset');
 
     //TODO Refactor

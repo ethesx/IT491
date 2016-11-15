@@ -1,4 +1,4 @@
-$(document).bind('pagecreate', function() {
+$(document).on('pagecreate', "#defContactInfo", function() {
     $('#phoneHome1 #phoneHome2 #phoneMobile1 #phoneMobile2').parent().removeClass('ui-input-text ui-shadow-inset');
 
 //TODO Refactor
