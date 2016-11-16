@@ -15,6 +15,7 @@
     <script src="js/address.js"></script>
     <script src="js/contact.js"></script>
     <script src="js/compliance.js"></script>
+    <script src="js/Information.js"></script>
 </head>
 
 <style>
@@ -165,20 +166,16 @@
             </thead>
             <tbody>
             <tr>
-                <td><fieldset class="ui-field-contain"><label for="fullname">First name:</label><input style="color: black;" class="ui-disabled" type="text" data-mini="true" name="fullname" id="fullname" value="David"></fieldset></td>
+                <td><fieldset class="ui-field-contain"><label for="fullname">First name:</label><input class="ui-disabled" type="text" data-mini="true" name="fullname" id="fullname" value=""></fieldset></td>
                 <td><a href="#" data-role="button" id="editFull" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
             </tr>
             <tr>
-                <td><fieldset class="ui-field-contain"><label for="middlename">Middle name:</label><input type="text" data-mini="true" name="middlename" id="middlename" value=""></fieldset></td>
+                <td><fieldset class="ui-field-contain"><label for="middlename">Middle name:</label><input type="text" class="ui-disabled" data-mini="true" name="middlename" id="middlename" value=""></fieldset></td>
                 <td><a href="#" data-role="button" id="editMiddle" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
             </tr>
             <tr>
-                <td><fieldset class="ui-field-contain"><label for="lastname">Last name:</label><input type="text" data-mini="true" name="lastname" id="lastname" value="Court"></fieldset></td>
+                <td><fieldset class="ui-field-contain"><label for="lastname">Last name:</label><input type="text" class="ui-disabled" data-mini="true" name="lastname" id="lastname" value="Court"></fieldset></td>
                 <td><a href="#" data-role="button" id="editLast" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
-            </tr>
-            <tr>
-                <td><fieldset class="ui-field-contain"><label for="dob">Date of Birth:</label><input type="date" data-mini="true" name="dob" id="dob" value="1990-03-14"></fieldset></td>
-                <td><a href="#" data-role="button" id="editDOB" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
             </tr>
             <tr>
                 <td>
@@ -198,28 +195,25 @@
                         <fieldset data-role="controlgroup">
                             <legend>Height:</legend>
                             <label for="feet"></label>
-                            <input type="text" name="feet" id="feet" value="5" data-mini="true">
+                            <input type="text" class="ui-disabled" name="feet" id="feet" value="" data-mini="true">
                             <label for="inch"></label>
-                            <input type="text" name="inch" id="inch" value="11" data-mini="true">
+                            <input type="text" class="ui-disabled" name="inch" id="inch" value="" data-mini="true">
                         </fieldset>
                     </div>
                 <td><a href="#" data-role="button" id="editHeight" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
             </tr>
             <tr>
-                <td><fieldset class="ui-field-contain"><label for="weight">Weight:</label><input type="number" name="weight" id="weight" value="210"></fieldset></td>
-                <td><a href="#" data-role="button" id="editWeight" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
-            </tr>
-            <tr>
                 <td>
                     <fieldset class="ui-field-contain">
                         <label for="eyeColor">Eye Color:</label>
-                        <select name="eyeColor" id="eyeColor" data-mini="true">
-                            <option value="brown">Brown</option>
-                            <option value="black">Black</option>
-                            <option value="hazel">Hazel</option>
-                            <option value="blue">Blue</option>
-                            <option value="grey">Grey</option>
-                            <option value="green">Green</option>
+                        <select name="eyeColor" class="ui-disabled" id="eyeColor" data-mini="true">
+                            <option value="6"></option>
+                            <option value="0">Brown</option>
+                            <option value="1">Black</option>
+                            <option value="2">Hazel</option>
+                            <option value="3">Blue</option>
+                            <option value="4">Grey</option>
+                            <option value="5">Green</option>
                         </select>
                     </fieldset>
                 </td>
@@ -229,13 +223,14 @@
                 <td>
                     <fieldset class="ui-field-contain">
                         <label for="race">Race:</label>
-                        <select name="race" id="race" data-mini="true">
-                            <option value="indian">American Indian or Alaska Native</option>
-                            <option value="asian">Asian</option>
-                            <option value="african">Black or African American</option>
-                            <option value="pacific">Native Hawaiian or Other Pacific</option>
-                            <option value="white">White</option>
-                            <option value="latino">Hispanic or Latino</option>
+                        <select name="race" class="ui-disabled" id="race" data-mini="true">
+                            <option value="0"></option>
+                            <option value="I">American Indian or Alaska Native</option>
+                            <option value="A">Asian</option>
+                            <option value="B">Black or African American</option>
+                            <option value="N">Native Hawaiian or Other Pacific</option>
+                            <option value="W">White</option>
+                            <option value="H">Hispanic or Latino</option>
                         </select>
                     </fieldset>
                 </td>
@@ -245,7 +240,14 @@
                 <td>
                     <fieldset class="ui-field-contain">
                         <label for="hairColor">Hair Color:</label>
-                        <input style="color: black;" type="text" data-mini="true" name="hairColor" id="hairColor" value="Brown">
+                        <select name="hairColor" class="ui-disabled" id="hairColor" data-mini="true">
+                            <option value="0"></option>
+                            <option value="1">Black</option>
+                            <option value="2">Brown</option>
+                            <option value="3">Blonde</option>
+                            <option value="4">White</option>
+                            <option value="5">Red</option>
+                        </select>
                     </fieldset>
                 </td>
                 <td><a href="#" data-role="button" id="editHair" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
@@ -254,7 +256,7 @@
                 <td>
                     <fieldset class="ui-field-contain">
                         <label for="inter">Interpreter Needed:</label>
-                        <select name="inter" id="inter" data-mini="true">
+                        <select name="inter" class="ui-disabled" id="inter" data-mini="true">
                             <option value="No">No</option>
                             <option value="Yes">Yes</option>
                         </select>
@@ -265,17 +267,8 @@
             <tr>
                 <td>
                     <fieldset class="ui-field-contain">
-                        <label for="marks">Marks:</label>
-                        <textarea name="marks" id="marks">Tattoo - L neck, sparrow Tattoo - L&R hands X with rat head</textarea>
-                    </fieldset>
-                </td>
-                <td><a href="#" data-role="button" id="editMarks" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
-            </tr>
-            <tr>
-                <td>
-                    <fieldset class="ui-field-contain">
                         <label for="ssn">SSN:</label>
-                        <input style="color: black;" type="text" data-mini="true" name="ssn" id="ssn" value="***-***-5555">
+                        <input style="color: black;" type="text" class="ui-disabled" pattern="^(\d{3}-?\d{2}-?\d{4}|XXX-XX-XXXX)$" data-mini="true" name="ssn" id="ssn" value="">
                     </fieldset>
                 </td>
                 <td><a href="#" data-role="button" id="editSSN" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
@@ -283,11 +276,20 @@
             <tr>
                 <td>
                     <fieldset class="ui-field-contain">
-                        <label for="caps">CAPS ID:</label>
-                        <input style="color: black;" type="number" data-mini="true" name="ssn" id="caps" value="67856423">
+                        <label for="language">Spoken Language:</label>
+                        <input style="color: black;" type="text" class="ui-disabled" data-mini="true" name="language" id="language" value="">
                     </fieldset>
                 </td>
-                <td><a href="#" data-role="button" id="editCaps" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
+                <td><a href="#" data-role="button" id="editLanguage" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset class="ui-field-contain">
+                        <label for="py">py ID:</label>
+                        <input style="color: black;" type="text" class="ui-disabled" data-mini="true" name="py" id="py" value="">
+                    </fieldset>
+                </td>
+                <td><a href="#" data-role="button" id="editPy" data-icon="edit" data-iconpos="left" data-mini="true" data-inline="true">Edit</a></td>
             </tr>
             </tbody>
         </table>
