@@ -36,6 +36,10 @@ input[type="text"]:disabled {
     color: inherit;
 }
 
+.ui-state-disabled {
+    opacity: .8 !important;
+}
+
 .footBtn{
     margin-top:2em;
 }
