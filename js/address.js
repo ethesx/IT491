@@ -1,5 +1,8 @@
 $(document).on('pagecreate', "#defAddr", function(){
-    $('#address1 #address2 #city #zip').parent().removeClass('ui-input-text ui-shadow-inset');
+    $('#address1').parent().removeClass('ui-input-text ui-shadow-inset');
+    $('#address2').parent().removeClass('ui-input-text ui-shadow-inset');
+    $('#city').parent().removeClass('ui-input-text ui-shadow-inset');
+    $('#zip').parent().removeClass('ui-input-text ui-shadow-inset');
 
     //TODO Refactor
     $('#address1Edit').click(function(){
