@@ -15,6 +15,9 @@
 .ui-body label{
     font-weight: bold;
 }
+.ui-field-contain {
+    border-bottom-style: none;
+}
 
 #defAddr .ui-field-contain .ui-block-a, #defContactInfo .ui-field-contain .ui-block-a {
     width:90% !important;
