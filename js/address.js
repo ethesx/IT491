@@ -38,6 +38,21 @@ $(document).on('pagecreate', "#defAddr", function(){
             .removeClass('ui-state-disabled');
     });
 
+    $('#stateEdit').click(function(){
+        $('#state')
+            .prop('disabled', false)
+            .parent()
+            .removeClass('ui-state-disabled');
+    });
+
+    $('#countyEdit').click(function(){
+        $('#county')
+            .prop('disabled', false)
+            .parent()
+            .removeClass('ui-state-disabled');
+    });
+
+
     //Data population --------------------------------------------------------------------------------------
 
     var ad = data[dataIndexSelected].CurrentAddress;
