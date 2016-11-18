@@ -1,5 +1,119 @@
 dataIndexSelected = 0;
 
+response = {
+    "Case":[
+        {
+            "MonitoringCondition":[
+                {
+                    "IsCompliant":false,
+                    "IsNonCompliant":false,
+                    "Condition":"Refrain from getting arrested",
+                    "Comment":"xczv"
+                },
+                {
+                    "IsCompliant":false,
+                    "IsNonCompliant":false,
+                    "Condition":"Maintain Active employment",
+                    "Comment":"vczxv"
+                },
+                {
+                    "IsCompliant":false,
+                    "IsNonCompliant":false,
+                    "Condition":"Maintain employment, or actively seek employment",
+                    "Comment":""
+                }
+            ],
+            "CaseNumber":"ATL-06-000012-001"
+        },
+        {
+            "MonitoringCondition":[
+                {
+                    "IsCompliant":false,
+                    "IsNonCompliant":false,
+                    "Condition":"Refrain from getting arrested",
+                    "Comment":"xczv"
+                },
+                {
+                    "IsCompliant":false,
+                    "IsNonCompliant":false,
+                    "Condition":"Maintain Active employment",
+                    "Comment":"vczxv"
+                },
+                {
+                    "IsCompliant":false,
+                    "IsNonCompliant":false,
+                    "Condition":"Maintain employment, or actively seek employment",
+                    "Comment":""
+                }
+            ],
+            "CaseNumber":"ATL-06-000024-001"
+        }
+    ],
+    "Interview":[
+        {
+            "PhoneExt":0,
+            "AppointmentLocation":"CAPE MAY COURT HOUSE",
+            "PhoneNumber":"(609) 463-6550",
+            "AppointmentType":"Office Visit",
+            "AppointmentTime":"04:15 PM",
+            "AppointmentDate":"20161027T000000.000 GMT"
+        }
+    ],
+    "ContactDetails":{
+        "SupplementalContactEmail":"testemail@hotmail.com",
+        "SupplementalContactPerson":"",
+        "PrimaryHome":"(111) 222-3335",
+        "SupplementalContactPhone":"(111) 222-3337",
+        "PrimaryMobile":"(111) 222-3335",
+        "CallLanguage":"EN",
+        "SecondaryMobile":"(111) 222-3333",
+        "Relationship":"",
+        "Email":"testemail@gmail.com",
+        "EmergencyPhone":"(111) 222-0000",
+        "NotificationMode":""
+    },
+    "DemographicInfo":{
+        "MiddleName":"L",
+        "LastName":"TAKUR'S",
+        "Gender":"",
+        "HairColor":"2",
+        "SSN":"111-01-0001",
+        "EyeColor":"1",
+        "HeightFt":1,
+        "InterpreterRequired":"",
+        "SpokenLanguage":"",
+        "FirstName":"ADITHI",
+        "HeightInches":1,
+        "Ethnicity":""
+    },
+    "SBINumber":"402653B",
+    "pyID":"D-836",
+    "EmpDetails":[
+        {
+            "Contact":0,
+            "PhoneExt":0,
+            "ApproxLengthOFEmployment":"",
+            "EmploymentName":"Test Employment",
+            "EmpStatus":"Active",
+            "Occupation":"Programmer",
+            "EmployerPhoneNumber":0
+        }
+    ],
+    "CurrentAddress":{
+        "Zip":"23345",
+        "CurAddressLengthStay":"",
+        "City":"Trenton",
+        "Address1":"25 Market Street",
+        "Address2":"Apt 300"
+    },
+    "AddressDetails":{
+        "Zip":"23345",
+        "CurAddressLengthStay":"",
+        "City":"Trenton",
+        "Address1":"25 Market Street",
+        "Address2":"Apt 300"
+    }
+};
 //FixME State and County data missing from CurrentAddress/AddressDetails
 //FixMe No secondary email available
 data = [
