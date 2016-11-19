@@ -16,6 +16,7 @@
     <script src="js/contact.js"></script>
     <script src="js/compliance.js"></script>
     <script src="js/information.js"></script>
+    <script src="js/util.js"></script>
 </head>
 
 <style>
@@ -303,7 +304,9 @@
     </div>
 
     <div data-role="main" class="ui-content">
-        <p class="pageTitle">Current Address</p>
+        <p class="pageTitle">Current Address
+           <a href="#" id="addrEdit" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext ui-btn-inline ui-btn-right btn-edit" >Edit</a>
+        </p>
 
 
 
@@ -311,49 +314,37 @@
 
             <div class="ui-field-contain">
                 <label for="address1">Address Line 1:</label>
-                <div class="ui-block-a">
-                    <input name="address1" id="address1" placeholder="" value="" data-mini="true"
-                           type="text" class="transparent" disabled="disabled">
-                </div>
-                <div class="ui-block-b">
-                    <a href="#" id="address1Edit" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext"
-                       onclick="">Edit</a>
-                </div>
+
+                    <input name="address1" id="address1" placeholder="" value=""
+                           type="text" class="transparent ui-disabled">
+
             </div>
 
             <div class="ui-field-contain">
                 <label for="address2">Address Line 2:</label>
-                <div class="ui-block-a">
-                    <input name="address2" id="address2" placeholder="" value="" data-mini="true" type="text"
-                           class="transparent" disabled="disabled">
-                </div>
-                <div class="ui-block-b">
-                    <a href="#" id="address2Edit" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext"
-                       onclick="">Edit</a>
-                </div>
+
+                    <input name="address2" id="address2" placeholder="" value="" type="text"
+                           class="transparent ui-disabled">
+
             </div>
 
             <div class="ui-field-contain">
                 <label for="city">City:</label>
-                <div class="ui-block-a">
-                    <input name="city" id="city" placeholder="" value="" data-mini="true" type="text"
-                           class="transparent" disabled="disabled">
-                </div>
-                <div class="ui-block-b">
-                    <a href="#" id="cityEdit" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext"
-                       onclick="">Edit</a>
-                </div>
+
+                    <input name="city" id="city" placeholder="" value=""  type="text"
+                           class="transparent ui-disabled">
+
             </div>
 
             <!--TODO need FIPS or abbreviation? -->
             <!--Removed - no source data -->
             <!--<div class="ui-field-contain">
                 <label for="state" class="select">State:</label>
-                <div class="ui-block-a">
 
 
 
-                    <select name="state" id="state" data-native-menu="true" data-mini="true" disabled="disabled" class="transparent">
+
+                    <select name="state" id="state" data-native-menu="true" data-mini="true" class="transparent ui-disabled">
                         <option value="al">Alabama</option>
                         <option value="ak">Alaska</option>
                         <option value="az">Arizona</option>
@@ -408,30 +399,23 @@
                     </select>
                    &lt;!&ndash; <input name="state" id="state" placeholder="" value="" data-mini="true" type="text"
                            class="transparent" disabled="disabled">&ndash;&gt;
-                </div>
-                <div class="ui-block-b">
-                    <a href="#" id="stateEdit" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext"
-                       onclick="">Edit</a>
-                </div>
+
             </div>-->
                 <div class="ui-field-contain">
                     <label for="zip">Zip Code:</label>
-                    <div class="ui-block-a">
-                        <input name="zip" id="zip" pattern="[0-9]{5}" placeholder="" value="" data-mini="true" type="text"
-                               class="transparent" disabled="disabled">
-                    </div>
-                    <div class="ui-block-b">
-                        <a href="#" id="zipEdit" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext"
-                           onclick="">Edit</a>
-                    </div>
+
+                        <input name="zip" id="zip" pattern="[0-9]{5}" placeholder="" value="" type="text"
+                               class="transparent ui-disabled">
+
+
                 </div>
 
                 <!--Removed - no source data -->
                 <!--<div class="ui-field-contain">
                     <label for="county" class="select">County:</label>
-                    <div class="ui-block-a">
 
-                        <select name="county" id="county" data-native-menu="true" data-mini="true" disabled="disabled">
+
+                        <select name="county" id="county" data-native-menu="true" data-mini="true" class="transparent ui-disabled">
                             <option value="001">Atlantic County</option>
                             <option value="003">Bergen County</option>
                             <option value="005">Burlington County</option>
@@ -455,11 +439,6 @@
                             <option value="041">Warren County</option>
                         </select>
 
-                    </div>
-                    <div class="ui-block-b">
-                        <a href="#" id="countyEdit" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext"
-                           onclick="">Edit</a>
-                    </div>
             </div>-->
 
         </div>

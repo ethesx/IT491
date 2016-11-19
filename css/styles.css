@@ -90,3 +90,11 @@ input[type="text"]:disabled {
     padding-bottom: 3px;
     margin-top: 10px;
 }
+
+.btn-edit{
+    top:1.5em !important;
+}
+
+#defAddr input[type=text].ui-disabled{
+    padding: .5em 0 0 1em;
+}

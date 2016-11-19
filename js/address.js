@@ -1,44 +1,10 @@
 $(document).on('pagecreate', "#defAddr", function(){
-    $('#address1').parent().removeClass('ui-input-text ui-shadow-inset');
-    $('#address2').parent().removeClass('ui-input-text ui-shadow-inset');
-    $('#city').parent().removeClass('ui-input-text ui-shadow-inset');
-    $('#zip').parent().removeClass('ui-input-text ui-shadow-inset');
 
-    //TODO Refactor
-    $('#address1Edit').click(function(){
-        $('#address1')
-            .removeClass('transparent')
-            .prop('disabled', false)
-            .parent()
-            .addClass('ui-input-text ui-shadow-inset')
-            .removeClass('ui-state-disabled');
-    });
+    Utils.toggleInset();
+    $('#addrEdit').click(function(){
+        Utils.toggleInputText();
+        Utils.toggleInset();
 
-    $('#address2Edit').click(function(){
-        $('#address2')
-            .removeClass('transparent')
-            .prop('disabled', false)
-            .parent()
-            .addClass('ui-input-text ui-shadow-inset')
-            .removeClass('ui-state-disabled');
-    });
-
-    $('#cityEdit').click(function(){
-        $('#city')
-            .removeClass('transparent')
-            .prop('disabled', false)
-            .parent()
-            .addClass('ui-input-text ui-shadow-inset')
-            .removeClass('ui-state-disabled');
-    });
-
-    $('#zipEdit').click(function(){
-        $('#zip')
-            .removeClass('transparent')
-            .prop('disabled', false)
-            .parent()
-            .addClass('ui-input-text ui-shadow-inset')
-            .removeClass('ui-state-disabled');
     });
 
     /*$('#stateEdit').click(function(){
