@@ -41,7 +41,7 @@ $(document).on('pagecreate', "#defAddr", function(){
             .removeClass('ui-state-disabled');
     });
 
-    $('#stateEdit').click(function(){
+    /*$('#stateEdit').click(function(){
         $('#state')
             .prop('disabled', false)
             .parent()
@@ -53,7 +53,7 @@ $(document).on('pagecreate', "#defAddr", function(){
             .prop('disabled', false)
             .parent()
             .removeClass('ui-state-disabled');
-    });
+    });*/
 
 
     //Data population --------------------------------------------------------------------------------------
@@ -65,6 +65,6 @@ $(document).on('pagecreate', "#defAddr", function(){
     $('#city').val(ad.City);
     $('#zip').val(ad.Zip);
     //TODO State and county are not listed in data - setting static values for now
-    $('#state').val("nj");
-    $('#county').val("021");
+    /*$('#state').val("nj");
+    $('#county').val("021");*/
 });
