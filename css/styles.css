@@ -95,6 +95,6 @@ input[type="text"]:disabled {
     top:1.5em !important;
 }
 
-#defAddr input[type=text].ui-disabled{
+#defAddr input[type=text].ui-disabled, #defContactInfo input[type=text].ui-disabled{
     padding: .5em 0 0 1em;
 }
