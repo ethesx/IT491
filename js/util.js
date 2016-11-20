@@ -1,10 +1,11 @@
 var Utils = {
-    toggleInset : function(){
-        $('input[type=text]').parent().toggleClass('ui-input-text ui-shadow-inset');
+
+    toggleInset : function(selector){
+        $(selector + ' input[type=text]').parent().toggleClass('ui-input-text ui-shadow-inset');
     },
 
-    toggleInputText : function(){
-        $('input[type=text]').toggleClass('ui-disabled transparent');
+    toggleInputText : function(selector){
+        $(selector + ' input[type=text]').toggleClass('ui-disabled transparent');
     },
 
 };

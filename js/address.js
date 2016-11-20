@@ -1,9 +1,10 @@
 $(document).on('pagecreate', "#defAddr", function(){
 
-    Utils.toggleInset();
+    var page = '#defAddr';
+    Utils.toggleInset(page);
     $('#addrEdit').click(function(){
-        Utils.toggleInputText();
-        Utils.toggleInset();
+        Utils.toggleInputText(page);
+        Utils.toggleInset(page);
 
     });
 

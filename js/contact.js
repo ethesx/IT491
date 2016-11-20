@@ -1,9 +1,10 @@
 $(document).on('pagecreate', "#defContactInfo", function() {
 
-    Utils.toggleInset();
+    var page = '#defContactInfo';
+    Utils.toggleInset(page);
     $('#contactInfoEdit').click(function () {
-        Utils.toggleInputText();
-        Utils.toggleInset();
+        Utils.toggleInputText(page);
+        Utils.toggleInset(page);
     });
 
     //Data population --------------------------------------------------------------------------------------
