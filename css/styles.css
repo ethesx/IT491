@@ -8,10 +8,6 @@
     font-size: 1em;
 }
 
-.ui-body, .ui-body label{
-    font-size:.9em;
-}
-
 .ui-body label{
     font-weight: bold;
 }
