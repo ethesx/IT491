@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/util.js"></script>
     <script src="js/data.js"></script>
+    <script src="js/common.js"></script>
     <script src="js/address.js"></script>
     <script src="js/contact.js"></script>
     <script src="js/compliance.js"></script>
@@ -73,10 +74,10 @@
 </div>
 
 <div data-role="page" data-theme="a" id="defList" >
-    <div data-role="header" class="ui-shadow">
-        <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back"></a>
-        <img border="0" src="images/state.png" alt="Logo, State" style="float:right;display:inline"/>
-        <h1><font color="#01498f">New Jersey Courts<br/>Pre-Trial Monitoring</font></h1>
+    <div data-role="header"  data-position="fixed">
+        <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
+        <h1 class="headerDefendantName">Choose Defendant</h1>
+        <a href="#" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div data-role="main" class="ui-content">
@@ -105,10 +106,10 @@
 </div>
 
 <div data-role="page" data-theme="a" id="alerts" >
-    <div data-role="header" class="ui-shadow" style="text-align:center;">
-        <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back"></a>
-        <img border="0" src="images/state.png" alt="Logo, State" style="float:right;display:inline"/>
-        <h1><font color="#01498f">New Jersey Courts<br/>Pre-Trial Monitoring</font></h1>
+    <div data-role="header"  data-position="fixed">
+        <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
+        <h1 class="headerDefendantName"></h1>
+        <a href="#" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div data-role="main" class="ui-content">
@@ -151,10 +152,10 @@
 </div>
 
 <div data-role="page" data-theme="a" id="defInfo" >
-    <div data-role="header" class="ui-shadow" style="text-align:center;">
-        <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back"></a>
-        <img border="0" src="images/state.png" alt="Logo, State" style="float:right;display:inline"/>
-        <h1><font color="#01498f">New Jersey Courts<br/>Pre-Trial Monitoring</font></h1>
+    <div data-role="header"  data-position="fixed">
+        <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
+        <h1 class="headerDefendantName"></h1>
+        <a href="#" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div style="text-align: center; font-weight: normal; font-size: large; padding-top: 10px;">Defendant Information</div>
@@ -300,8 +301,10 @@
 </div>
 
 <div data-role="page" data-theme="a" id="defAddr" >
-    <div data-role="header" class="ui-shadow">
-
+    <div data-role="header"  data-position="fixed">
+            <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
+            <h1 class="headerDefendantName"></h1>
+            <a href="#" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div data-role="main" class="ui-content">
@@ -450,8 +453,10 @@
 </div>
 
 <div data-role="page" data-theme="a" id="defContactInfo" >
-    <div data-role="header" class="ui-shadow">
-
+    <div data-role="header"  data-position="fixed">
+        <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
+        <h1 class="headerDefendantName"></h1>
+        <a href="#" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div data-role="main" class="ui-content">
@@ -521,8 +526,10 @@
 </div>
 
 <div data-role="page" data-theme="a" id="compliance" >
-    <div data-role="header" class="ui-shadow">
-
+    <div data-role="header"  data-position="fixed">
+        <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
+        <h1 class="headerDefendantName"></h1>
+        <a href="#" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div data-role="main" class="ui-content">
@@ -540,10 +547,10 @@
 </div>
 
 <div data-role="page" data-theme="a" id="schedule" >
-    <div data-role="header" class="ui-shadow" style="text-align:center;">
-        <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back"></a>
-        <img border="0" src="images/state.png" alt="Logo, State" style="float:right;display:inline"/>
-        <h1><font color="#01498f">New Jersey Courts<br/>Pre-Trial Monitoring</font></h1>
+    <div data-role="header"  data-position="fixed">
+        <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
+        <h1 class="headerDefendantName"></h1>
+        <a href="#" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div data-role="main" class="ui-content">
@@ -567,10 +574,10 @@
 </div>
 
 <div data-role="page" data-theme="a" id="summary" >
-    <div data-role="header" class="ui-shadow" style="text-align:center;">
-        <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back"></a>
-        <img border="0" src="images/state.png" alt="Logo, State" style="float:right;display:inline"/>
-        <h1><font color="#01498f">New Jersey Courts<br/>Pre-Trial Monitoring</font></h1>
+    <div data-role="header"  data-position="fixed">
+        <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
+        <h1 class="headerDefendantName"></h1>
+        <a href="#" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
 
@@ -606,10 +613,10 @@
 </div>
 
 <div data-role="page" data-theme="a" id="confirmation" >
-    <div data-role="header" class="ui-shadow" style="text-align:center;">
-        <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back"></a>
-        <img border="0" src="images/state.png" alt="Logo, State" style="float:right;display:inline"/>
-        <h1><font color="#01498f">New Jersey Courts<br/>Pre-Trial Monitoring</font></h1>
+    <div data-role="header"  data-position="fixed">
+        <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
+        <h1 class="headerDefendantName"></h1>
+        <a href="#" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
     <div data-role="main" class="ui-content">
         <p class="pageTitle">Confirmation</p>
