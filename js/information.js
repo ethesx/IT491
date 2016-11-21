@@ -1,114 +1,125 @@
 $(document).on('pagecreate', "#defInfo", function(){
 
-    $('#editFull').click(function() {
-        if($("#fullname").hasClass("ui-disabled")){
-            $("#fullname").removeClass('ui-disabled');
-        }
-        else{
-            $("#fullname").addClass('ui-disabled');
-        }
+    var page = '#defInfo';
+    Utils.toggleInset(page);
+    $('#infoEdit').click(function(){
+        Utils.toggleInputText(page);
+        Utils.toggleInset(page);
     });
 
-    $('#editMiddle').click(function() {
-        if($("#middlename").hasClass("ui-disabled")){
-            $("#middlename").removeClass('ui-disabled');
-        }
-        else{
-            $("#middlename").addClass('ui-disabled');
-        }
-    });
+    /*
 
-    $('#editLast').click(function() {
-        if($("#lastname").hasClass("ui-disabled")){
-            $("#lastname").removeClass('ui-disabled');
-        }
-        else{
-            $("#lastname").addClass('ui-disabled');
-        }
-    });
+     $('#editFull').click(function() {
+     if($("#fullname").hasClass("ui-disabled")){
+     $("#fullname").removeClass('ui-disabled');
+     }
+     else{
+     $("#fullname").addClass('ui-disabled');
+     }
+     });
 
-    $('#editGender').click(function() {
-        if($("#gender").hasClass("ui-disabled")){
-            $("#gender").removeClass('ui-disabled');
-        }
-        else{
-            $("#gender").addClass('ui-disabled');
-        }
-    });
+     $('#editMiddle').click(function() {
+     if($("#middlename").hasClass("ui-disabled")){
+     $("#middlename").removeClass('ui-disabled');
+     }
+     else{
+     $("#middlename").addClass('ui-disabled');
+     }
+     });
 
-    $('#editHeight').click(function() {
-        if($("#feet").hasClass("ui-disabled")){
-            $("#feet").removeClass('ui-disabled');
-            $("#inch").removeClass('ui-disabled');
-        }
-        else{
-            $("#feet").addClass('ui-disabled');
-            $("#inch").addClass('ui-disabled');
-        }
-    });
+     $('#editLast').click(function() {
+     if($("#lastname").hasClass("ui-disabled")){
+     $("#lastname").removeClass('ui-disabled');
+     }
+     else{
+     $("#lastname").addClass('ui-disabled');
+     }
+     });
 
-    $('#editEye').click(function() {
-        if($("#eyeColor").hasClass("ui-disabled")){
-            $("#eyeColor").removeClass('ui-disabled');
-        }
-        else{
-            $("#eyeColor").addClass('ui-disabled');
-        }
-    });
+     $('#editGender').click(function() {
+     if($("#gender").hasClass("ui-disabled")){
+     $("#gender").removeClass('ui-disabled');
+     }
+     else{
+     $("#gender").addClass('ui-disabled');
+     }
+     });
 
-    $('#editRace').click(function() {
-        if($("#race").hasClass("ui-disabled")){
-            $("#race").removeClass('ui-disabled');
-        }
-        else{
-            $("#race").addClass('ui-disabled');
-        }
-    });
+     $('#editHeight').click(function() {
+     if($("#feet").hasClass("ui-disabled")){
+     $("#feet").removeClass('ui-disabled');
+     $("#inch").removeClass('ui-disabled');
+     }
+     else{
+     $("#feet").addClass('ui-disabled');
+     $("#inch").addClass('ui-disabled');
+     }
+     });
 
-    $('#editHair').click(function() {
-        if($("#hairColor").hasClass("ui-disabled")){
-            $("#hairColor").removeClass('ui-disabled');
-        }
-        else{
-            $("#hairColor").addClass('ui-disabled');
-        }
-    });
+     $('#editEye').click(function() {
+     if($("#eyeColor").hasClass("ui-disabled")){
+     $("#eyeColor").removeClass('ui-disabled');
+     }
+     else{
+     $("#eyeColor").addClass('ui-disabled');
+     }
+     });
 
-    $('#editInter').click(function() {
-        if($("#inter").hasClass("ui-disabled")){
-            $("#inter").removeClass('ui-disabled');
-        }
-        else{
-            $("#inter").addClass('ui-disabled');
-        }
-    });
+     $('#editRace').click(function() {
+     if($("#race").hasClass("ui-disabled")){
+     $("#race").removeClass('ui-disabled');
+     }
+     else{
+     $("#race").addClass('ui-disabled');
+     }
+     });
 
-    $('#editSSN').click(function() {
-        if($("#ssn").hasClass("ui-disabled")){
-            $("#ssn").removeClass('ui-disabled');
-        }
-        else{
-            $("#ssn").addClass('ui-disabled');
-        }
-    });
+     $('#editHair').click(function() {
+     if($("#hairColor").hasClass("ui-disabled")){
+     $("#hairColor").removeClass('ui-disabled');
+     }
+     else{
+     $("#hairColor").addClass('ui-disabled');
+     }
+     });
 
-    $('#editLanguage').click(function() {
-        if($("#language").hasClass("ui-disabled")){
-            $("#language").removeClass('ui-disabled');
-        }
-        else{
-            $("#language").addClass('ui-disabled');
-        }
-    });
+     $('#editInter').click(function() {
+     if($("#inter").hasClass("ui-disabled")){
+     $("#inter").removeClass('ui-disabled');
+     }
+     else{
+     $("#inter").addClass('ui-disabled');
+     }
+     });
 
-    $('#editPy').click(function() {
-        if($("#py").hasClass("ui-disabled")){
-            $("#py").removeClass('ui-disabled');
-        }
-        else{
-            $("#py").addClass('ui-disabled');
-        }
-    });
+     $('#editSSN').click(function() {
+     if($("#ssn").hasClass("ui-disabled")){
+     $("#ssn").removeClass('ui-disabled');
+     }
+     else{
+     $("#ssn").addClass('ui-disabled');
+     }
+     });
+
+     $('#editLanguage').click(function() {
+     if($("#language").hasClass("ui-disabled")){
+     $("#language").removeClass('ui-disabled');
+     }
+     else{
+     $("#language").addClass('ui-disabled');
+     }
+     });
+
+     $('#editPy').click(function() {
+     if($("#py").hasClass("ui-disabled")){
+     $("#py").removeClass('ui-disabled');
+     }
+     else{
+     $("#py").addClass('ui-disabled');
+     }
+     });
+
+     */
 
     //Data population --------------------------------------------------------------------------------------
 
