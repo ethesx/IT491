@@ -19,6 +19,7 @@
     <script src="js/compliance.js"></script>
     <script src="js/information.js"></script>
     <script src="js/currentDate.js"></script>
+    <script src="js/name.js"></script>
 
 </head>
 
@@ -86,21 +87,7 @@
         <form class="ui-filterable">
             <input id="myFilter" data-type="search" placeholder="Search for names...">
         </form>
-        <ul data-role="listview" data-filter="true" data-input="#myFilter" data-autodividers="true" data-inset="true">
-            <li><a href="#">Andrew, Fuller</a></li>
-            <li><a href="#">Garcia, Christina</a></li>
-            <li><a href="#">Hall, Ralph</a></li>
-            <li><a href="#">Johnson, Calvin</a></li>
-            <li><a href="#">King, Valarie</a></li>
-            <li><a href="#">Lee, Glen</a></li>
-            <li><a href="#">Lewis, Gabriel</a></li>
-            <li><a href="#">Martinez, Diana</a></li>
-            <li><a href="#">Miller, Bob</a></li>
-            <li><a href="#">Nancy, Davolio</a></li>
-            <li><a href="#">Smith, William</a></li>
-            <li><a href="#">Taylor, Cameron</a></li>
-            <li><a href="#">Thomas, Chloe</a></li>
-            <li><a href="#">Wilson, Billy</a></li>
+        <ul data-role="listview" id="myList" data-filter="true" data-input="#myFilter" data-autodividers="true" data-sort="true" data-inset="true">
         </ul>
         <a href="#alerts" class="ui-btn ui-shadow ui-corner-all">Continue</a>
     </div>
@@ -159,144 +146,86 @@
         <a href="#" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
-    <div style="text-align: center; font-weight: normal; font-size: large; padding-top: 10px;">Defendant Information</div>
     <div data-role="main" class="ui-content">
-        <table style="background-color: white; border-radius: 15px; text-shadow:0 0 0; color: black;" data-role="table" data-mode="columntoggle" class="ui-responsive">
-            <thead>
-            <tr>
-                <th></th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td><fieldset class="ui-field-contain"><label for="fullname">First name:</label><input class="ui-disabled" type="text"  name="fullname" id="fullname" value=""></fieldset></td>
-                <td><a href="#" data-role="button" id="editFull" data-icon="edit" data-iconpos="left"  data-inline="true">Edit</a></td>
-            </tr>
-            <tr>
-                <td><fieldset class="ui-field-contain"><label for="middlename">Middle name:</label><input type="text" class="ui-disabled"  name="middlename" id="middlename" value=""></fieldset></td>
-                <td><a href="#" data-role="button" id="editMiddle" data-icon="edit" data-iconpos="left"  data-inline="true">Edit</a></td>
-            </tr>
-            <tr>
-                <td><fieldset class="ui-field-contain"><label for="lastname">Last name:</label><input type="text" class="ui-disabled"  name="lastname" id="lastname" value="Court"></fieldset></td>
-                <td><a href="#" data-role="button" id="editLast" data-icon="edit" data-iconpos="left"  data-inline="true">Edit</a></td>
-            </tr>
-            <tr>
-                <td>
-                    <fieldset class="ui-field-contain">
-                        <label for="gender">Gender:</label>
-                        <select name="gender" id="gender" class="ui-disabled" >
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                        </select>
-                    </fieldset>
-                </td>
-                <td><a href="#" data-role="button" id="editGender" data-icon="edit" data-iconpos="left"  data-inline="true">Edit</a></td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="ui-field-contain" >
-                        <fieldset data-role="controlgroup">
-                            <legend>Height:</legend>
-                            <label for="feet"></label>
-                            <input type="text" class="ui-disabled" name="feet" id="feet" value="" >
-                            <label for="inch"></label>
-                            <input type="text" class="ui-disabled" name="inch" id="inch" value="" >
-                        </fieldset>
-                    </div>
-                <td><a href="#" data-role="button" id="editHeight" data-icon="edit" data-iconpos="left"  data-inline="true">Edit</a></td>
-            </tr>
-            <tr>
-                <td>
-                    <fieldset class="ui-field-contain">
-                        <label for="eyeColor">Eye Color:</label>
-                        <select name="eyeColor" class="ui-disabled" id="eyeColor" >
-                            <option value="6"></option>
-                            <option value="0">Brown</option>
-                            <option value="1">Black</option>
-                            <option value="2">Hazel</option>
-                            <option value="3">Blue</option>
-                            <option value="4">Grey</option>
-                            <option value="5">Green</option>
-                        </select>
-                    </fieldset>
-                </td>
-                <td><a href="#" data-role="button" id="editEye" data-icon="edit" data-iconpos="left"  data-inline="true">Edit</a></td>
-            </tr>
-            <tr>
-                <td>
-                    <fieldset class="ui-field-contain">
-                        <label for="race">Race:</label>
-                        <select name="race" class="ui-disabled" id="race" >
-                            <option value="0"></option>
-                            <option value="I">American Indian or Alaska Native</option>
-                            <option value="A">Asian</option>
-                            <option value="B">Black or African American</option>
-                            <option value="N">Native Hawaiian or Other Pacific</option>
-                            <option value="W">White</option>
-                            <option value="H">Hispanic or Latino</option>
-                        </select>
-                    </fieldset>
-                </td>
-                <td><a href="#" data-role="button" id="editRace" data-icon="edit" data-iconpos="left"  data-inline="true">Edit</a></td>
-            </tr>
-            <tr>
-                <td>
-                    <fieldset class="ui-field-contain">
-                        <label for="hairColor">Hair Color:</label>
-                        <select name="hairColor" class="ui-disabled" id="hairColor" >
-                            <option value="0"></option>
-                            <option value="1">Black</option>
-                            <option value="2">Brown</option>
-                            <option value="3">Blonde</option>
-                            <option value="4">White</option>
-                            <option value="5">Red</option>
-                        </select>
-                    </fieldset>
-                </td>
-                <td><a href="#" data-role="button" id="editHair" data-icon="edit" data-iconpos="left"  data-inline="true">Edit</a></td>
-            </tr>
-            <tr>
-                <td>
-                    <fieldset class="ui-field-contain">
-                        <label for="inter">Interpreter Needed:</label>
-                        <select name="inter" class="ui-disabled" id="inter" >
-                            <option value="No">No</option>
-                            <option value="Yes">Yes</option>
-                        </select>
-                    </fieldset>
-                </td>
-                <td><a href="#" data-role="button" id="editInter" data-icon="edit" data-iconpos="left"  data-inline="true">Edit</a></td>
-            </tr>
-            <tr>
-                <td>
-                    <fieldset class="ui-field-contain">
-                        <label for="ssn">SSN:</label>
-                        <input style="color: black;" type="text" class="ui-disabled" pattern="^(\d{3}-?\d{2}-?\d{4}|XXX-XX-XXXX)$"  name="ssn" id="ssn" value="">
-                    </fieldset>
-                </td>
-                <td><a href="#" data-role="button" id="editSSN" data-icon="edit" data-iconpos="left"  data-inline="true">Edit</a></td>
-            </tr>
-            <tr>
-                <td>
-                    <fieldset class="ui-field-contain">
-                        <label for="language">Spoken Language:</label>
-                        <input style="color: black;" type="text" class="ui-disabled"  name="language" id="language" value="">
-                    </fieldset>
-                </td>
-                <td><a href="#" data-role="button" id="editLanguage" data-icon="edit" data-iconpos="left"  data-inline="true">Edit</a></td>
-            </tr>
-            <tr>
-                <td>
-                    <fieldset class="ui-field-contain">
-                        <label for="py">py ID:</label>
-                        <input style="color: black;" type="text" class="ui-disabled"  name="py" id="py" value="">
-                    </fieldset>
-                </td>
-                <td><a href="#" data-role="button" id="editPy" data-icon="edit" data-iconpos="left"  data-inline="true">Edit</a></td>
-            </tr>
-            </tbody>
-        </table>
+        <p class="pageTitle">Defendant Information
+            <a href="#" id="infoEdit" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext ui-btn-inline ui-btn-right btn-edit" >Edit</a>
+        </p>
+
+        <div class="ui-body ui-body-a ui-corner-all">
+            <fieldset class="ui-field-contain"><label for="fullname">First name:</label><input class="ui-disabled transparent" type="text"  name="fullname" id="fullname" value=""></fieldset>
+            <fieldset class="ui-field-contain"><label for="middlename">Middle name:</label><input type="text" class="ui-disabled transparent"  name="middlename" id="middlename" value=""></fieldset>
+            <fieldset class="ui-field-contain"><label for="lastname">Last name:</label><input type="text" class="ui-disabled transparent"  name="lastname" id="lastname" value="Court"></fieldset>
+            <fieldset class="ui-field-contain">
+                <label for="gender">Gender:</label>
+                <select name="gender" id="gender" class="ui-disabled transparent" >
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </fieldset>
+            <div class="ui-field-contain" >
+                <fieldset data-role="controlgroup">
+                    <legend>Height:</legend>
+                    <label for="feet"></label>
+                    <input type="text" class="ui-disabled transparent" name="feet" id="feet" value="" >
+                    <label for="inch"></label>
+                    <input type="text" class="ui-disabled transparent" name="inch" id="inch" value="" >
+                </fieldset>
+            </div>
+            <fieldset class="ui-field-contain">
+                <label for="eyeColor">Eye Color:</label>
+                <select name="eyeColor" class="ui-disabled transparent" id="eyeColor" >
+                    <option value="6"></option>
+                    <option value="0">Brown</option>
+                    <option value="1">Black</option>
+                    <option value="2">Hazel</option>
+                    <option value="3">Blue</option>
+                    <option value="4">Grey</option>
+                    <option value="5">Green</option>
+                </select>
+            </fieldset>
+            <fieldset class="ui-field-contain">
+                <label for="race">Race:</label>
+                <select name="race" class="ui-disabled transparent" id="race" >
+                    <option value="0"></option>
+                    <option value="I">American Indian or Alaska Native</option>
+                    <option value="A">Asian</option>
+                    <option value="B">Black or African American</option>
+                    <option value="N">Native Hawaiian or Other Pacific</option>
+                    <option value="W">White</option>
+                    <option value="H">Hispanic or Latino</option>
+                </select>
+            </fieldset>
+            <fieldset class="ui-field-contain">
+                <label for="hairColor">Hair Color:</label>
+                <select name="hairColor" class="ui-disabled transparent" id="hairColor" >
+                    <option value="0"></option>
+                    <option value="1">Black</option>
+                    <option value="2">Brown</option>
+                    <option value="3">Blonde</option>
+                    <option value="4">White</option>
+                    <option value="5">Red</option>
+                </select>
+            </fieldset>
+            <fieldset class="ui-field-contain">
+                <label for="inter">Interpreter Needed:</label>
+                <select name="inter" class="ui-disabled transparent" id="inter" >
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+            </fieldset>
+            <fieldset class="ui-field-contain">
+                <label for="ssn">SSN:</label>
+                <input style="color: black;" type="text" class="ui-disabled transparent" pattern="^(\d{3}-?\d{2}-?\d{4}|XXX-XX-XXXX)$"  name="ssn" id="ssn" value="">
+            </fieldset>
+            <fieldset class="ui-field-contain">
+                <label for="language">Spoken Language:</label>
+                <input style="color: black;" type="text" class="ui-disabled transparent"  name="language" id="language" value="">
+            </fieldset>
+            <fieldset class="ui-field-contain">
+                <label for="py">py ID:</label>
+                <input style="color: black;" type="text" class="ui-disabled transparent"  name="py" id="py" value="">
+            </fieldset>
+        </div>
         <a href="#defAddr" id="btn-info" class="ui-btn ui-btn-a ui-corner-all mc-top-margin-1-5">Continue</a>
     </div>
 </div>
@@ -470,7 +399,7 @@
             <div class="ui-field-contain">
                 <label for="phoneHome1">Primary Home:</label>
 
-                    <input name="phoneHome1" id="phoneHome1" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="" value="" 
+                    <input name="phoneHome1" id="phoneHome1" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="" value=""
                            type="text" class="transparent ui-disabled">
 
             </div>
@@ -486,7 +415,7 @@
             <div class="ui-field-contain">
                 <label for="phoneHome2">Secondary Home:</label>
 
-                    <input name="phoneHome2" id="phoneHome2" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="" value="" 
+                    <input name="phoneHome2" id="phoneHome2" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="" value=""
                            type="text" class="transparent ui-disabled">
 
             </div>
@@ -494,14 +423,14 @@
             <div class="ui-field-contain">
                 <label for="phoneMobile2">Secondary Mobile:</label>
 
-                    <input name="phoneMobile2" id="phoneMobile2" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="" value="" 
+                    <input name="phoneMobile2" id="phoneMobile2" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="" value=""
                            type="text" class="transparent ui-disabled">
 
             </div>
 
             <div class="ui-field-contain">
                 <label for="email1">Primary Email:</label>
-                    <input name="email1" id="email1" pattern="^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|&quot;((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?&quot;)@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$" placeholder="" value="" 
+                    <input name="email1" id="email1" pattern="^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|&quot;((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?&quot;)@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$" placeholder="" value=""
                            type="text" class="transparent ui-disabled">
 
             </div>
@@ -630,13 +559,5 @@
         <a href="main.html" class="ui-btn ui-btn-a ui-corner-all mc-top-margin-1-5">Logout</a>
     </div>
 </div>
-
-<script>
-    $('#editFull').click(function() {
-        $("#fullname").removeClass('ui-disabled');
-        var bla = $('#fullname').val();
-        alert(bla);
-    });
-</script>
 </body>
 </html>
