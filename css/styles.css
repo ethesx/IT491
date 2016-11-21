@@ -94,3 +94,28 @@ input[type="text"]:disabled {
 #defAddr input[type=text].ui-disabled, #defContactInfo input[type=text].ui-disabled{
     padding: .5em 0 0 1em;
 }
+.ui-header{
+    height:3.2em;
+}
+
+.headerDefendantName{
+    text-transform: capitalize;
+}
+
+.headBtn {
+    zoom: 140%;
+    -moz-transform: scale(1.40);
+
+}
+.headBtn.ui-btn-left, .headBtn.ui-btn-right{
+    top: .75em;
+}
+
+.headBtn.ui-btn-right{
+    right: 1em;
+}
+.headBtn.ui-btn-left{
+    left: 1em;
+}
+
+
