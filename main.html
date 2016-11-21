@@ -18,6 +18,7 @@
     <script src="js/contact.js"></script>
     <script src="js/compliance.js"></script>
     <script src="js/information.js"></script>
+    <script src="js/currentDate.js"></script>
 
 </head>
 
@@ -568,7 +569,7 @@
                     <option value="yes">YES</option>
                 </select><br><br>
             </p>
-        </div><a href="#"  id="btn-schedule" class="ui-btn ui-btn-a ui-corner-all mc-top-margin-1-5">Submit Violation To Court</a>
+        </div><a href="#"  id="" class="ui-btn ui-btn-a ui-corner-all mc-top-margin-1-5">Submit Violation To Court</a>
         <a href="#summary" id="btn-schedule" class="ui-btn ui-btn-a ui-corner-all mc-top-margin-1-5">Continue</a>
     </div>
 </div>
@@ -620,7 +621,13 @@
     </div>
     <div data-role="main" class="ui-content">
         <p class="pageTitle">Confirmation</p>
-        <a href="#defList" class="ui-btn ui-btn-a ui-corner-all mc-top-margin-1-5">Return to Defendant List</a><br><br>
+        <div id="wrap"  class="sch" >
+            Your interview with<br>
+            <h3 class="headerDefendantName"></h3>
+            has been completed on <p id="date"></p>
+
+        </div>
+        <a href="#defList" class="ui-btn ui-btn-a ui-corner-all mc-top-margin-1-5">Return to Defendant List</a>
         <a href="main.html" class="ui-btn ui-btn-a ui-corner-all mc-top-margin-1-5">Logout</a>
     </div>
 </div>
