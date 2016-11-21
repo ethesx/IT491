@@ -101,6 +101,9 @@ input[type="text"]:disabled {
 
 .headerDefendantName{
     padding-top: 1em !important;
+}
+
+.defendantName, .headerDefendantName{
     text-transform: capitalize;
 }
 
