@@ -83,7 +83,9 @@
     </div>
 
     <div data-role="main" class="ui-content">
-        <p class="pageTitle">Defendant Names</p>
+        <div class="pageTitleDiv">
+            <div class="pageTitle">Defendant Names</div>
+        </div>
         <form class="ui-filterable">
             <input id="myFilter" data-type="search" placeholder="Search for names...">
         </form>
@@ -147,9 +149,10 @@
     </div>
 
     <div data-role="main" class="ui-content">
-        <p class="pageTitle">Defendant Information
-            <a href="#" id="infoEdit" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext ui-btn-inline ui-btn-right btn-edit" >Edit</a>
-        </p>
+        <div class="pageTitleDiv" >
+            <div class="pageTitle">Defendant Information</div>
+            <div class="pageTitleEditBtn"><a href="#" id="infoEdit" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext ui-btn-inline" >Edit</a></div>
+        </div>
 
         <div class="ui-body ui-body-a ui-corner-all">
             <fieldset class="ui-field-contain"><label for="fullname">First name:</label><input class="ui-disabled transparent" type="text"  name="fullname" id="fullname" value=""></fieldset>
@@ -238,10 +241,10 @@
     </div>
 
     <div data-role="main" class="ui-content">
-        <p class="pageTitle">Current Address
-           <a href="#" id="addrEdit" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext ui-btn-inline ui-btn-right btn-edit" >Edit</a>
-        </p>
-
+        <div class="pageTitleDiv" >
+            <div class="pageTitle">Current Address</div>
+            <div class="pageTitleEditBtn"><a href="#" id="addrEdit" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext ui-btn-inline" >Edit</a></div>
+        </div>
 
 
         <div class="ui-body ui-body-a ui-corner-all">
@@ -390,9 +393,10 @@
     </div>
 
     <div data-role="main" class="ui-content">
-        <p class="pageTitle">Contact Information
-            <a href="#" id="contactInfoEdit" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext ui-btn-inline ui-btn-right btn-edit" >Edit</a>
-        </p>
+        <div class="pageTitleDiv" >
+            <div class="pageTitle">Contact Information</div>
+            <div class="pageTitleEditBtn"><a href="#" id="contactInfoEdit" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext ui-btn-inline" >Edit</a></div>
+        </div>
 
         <div class="ui-body ui-body-a ui-corner-all">
 
@@ -463,8 +467,11 @@
     </div>
 
     <div data-role="main" class="ui-content">
-        <p class="pageTitle">Monitoring Conditions</p>
-        <p class="pageSubTitle">Please tap all non-compliant items</p>
+
+        <div class="pageTitleDiv" >
+            <div class="pageTitle">Monitoring Conditions</div>
+            <div class="pageSubTitle">Please select all non-compliant items</div>
+        </div>
 
         <!--TODO Need list of values to indicate -->
 
@@ -484,7 +491,9 @@
     </div>
 
     <div data-role="main" class="ui-content">
-        <p class="pageTitle">Scheduling</p>
+        <div class="pageTitleDiv" >
+            <div class="pageTitle">Scheduling</div>
+        </div>
         <div id="wrap"  class="sch" >
             <p>	<label><b>Do you need to schedule an <br>appointment for the defendant?</b></label>
                 <select name="flip-1" id="flip-1" data-role="slider">
@@ -512,7 +521,9 @@
 
 
     <div data-role="main" class="ui-content">
-        <p class="pageTitle">Interview Summary</p>
+        <div class="pageTitleDiv" >
+            <div class="pageTitle">Interview Summary</div>
+        </div>
 
         <div id="wrap1" class="sch">
             <p>
@@ -549,7 +560,9 @@
         <a href="#" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
     <div data-role="main" class="ui-content">
-        <p class="pageTitle">Confirmation</p>
+        <div class="pageTitleDiv" >
+            <div class="pageTitle">Confirmation</div>
+        </div>
         <div id="wrap"  class="sch" >
             Your interview with<br>
             <strong class="headerDefendantName"></strong><br>

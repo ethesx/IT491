@@ -1,10 +1,20 @@
-.pageTitle{
+.pageTitleDiv{
     text-align: center;
-    font-size: 1.2em;
+    position:relative;
+    padding:19px 0;
+}
+.pageTitle{
+    display:inline;
+    font-size: 1.5em;
+}
+.pageTitleEditBtn{
+    position:absolute;
+    right:0;
+    top:9px;
 }
 
 .pageSubTitle{
-    text-align: center;
+    padding-top:1em;
     font-size: 1em;
 }
 
@@ -42,10 +52,6 @@ input[type="text"]:disabled {
 .footBtn{
     margin-top:2em;
     color:#52b480 !important;
-}
-
-#complianceDiv{
-    margin-top:40px;
 }
 
 #compliance .footBtn{
