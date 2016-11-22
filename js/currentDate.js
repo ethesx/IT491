@@ -5,6 +5,16 @@
 
 $(document).on('pagecreate', "#confirmation", function() {
 
+    getDate();
+});
+
+$(document).on('pagecreate', "#summary", function() {
+
+ getDate();
+
+});
+
+function getDate() {
     var date = new Date();
 
     var month = date.getMonth()+1;
@@ -21,5 +31,4 @@ $(document).on('pagecreate', "#confirmation", function() {
         (day<10 ? '0' : '') + day + '/' + date.getFullYear() + " at " + hours + ":" + mins + ampm;
 
     document.getElementById("date").innerHTML = result;
-
-});
+};
