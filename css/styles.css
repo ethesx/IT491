@@ -87,6 +87,11 @@ input[type="text"]:disabled {
     margin-top: 10px;
 }
 
+.icon {
+    float: left;
+    margin-left: 5%;
+}
+
 .btn-edit{
     top:1.5em !important;
 }
