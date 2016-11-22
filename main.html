@@ -32,47 +32,51 @@
 <body >
 
 <div data-role="page" data-theme="a" id="login" >
-    <div data-role="header" class="ui-shadow">
-        <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back"></a>
-        <img border="0" src="images/state.png" alt="Logo, State" style="float:right;display:inline"/>
-        <h1><font color="#01498f">New Jersey Courts<br/>Pre-Trial Monitoring</font></h1>
+    <div data-role="header" style="height:auto;">
+
+        <img border="0" src="images/njcourtsbanner.png" alt="Logo, State" style="width:100%;max-width:414px;"/>
+        <!--<h1><font color="#01498f">New Jersey Courts<br/>Pre-Trial Monitoring</font></h1>-->
     </div>
 
     <div style="background-color: #52B480; padding:100px 50px 50px 50px;"></div>
-    <div id="wrap" style="background-color: #FFF; border-radius:25px;">
-        <div data-role="main" class="ui-content">
-            <input type="text" name="txt-email" id="txt-email" value="User ID" style="text-align: center;">
-            <input type="password" name="txt-password" id="txt-password" value="Password" style="text-align: center;">
 
-            <a href="#defList" id="btn-login" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5"style="background-color: #52B480; color:white; text-shadow:0 0 0;">Log In</a>
+        <div data-role="main" class="ui-content" >
+            <div style="background-color: #FFF; border-radius:25px;">
+                <div class="ui-content">
+                    <input type="text" name="txt-email" id="txt-email" value="User ID" style="text-align: center;">
+                    <input type="password" name="txt-password" id="txt-password" value="Password" style="text-align: center;">
 
-            <label for="txt-password" style="text-align: center; color:gray; text-shadow:0 0 0;">Forgot User ID or Password?</label>
+                    <a href="#defList" id="btn-login" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5"style="background-color: #52B480; color:white; text-shadow:0 0 0;">Log In</a>
 
-            <!--
-            <a href="#dlg-invalid-credentials" data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Submit</a>
-            -->
+                    <label for="txt-password" style="text-align: center; color:gray; text-shadow:0 0 0;">Forgot User ID or Password?</label>
 
-            <div data-role="popup" id="dlg-invalid-credentials" data-dismissible="false" style="max-width:400px;">
-                <div role="main" class="ui-content">
-                    <h3 class="mc-text-danger">Login Failed</h3>
-                    <p>Did you enter the right credentials?</p>
-                    <div class="mc-text-center"><a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+                    <!--
+                    <a href="#dlg-invalid-credentials" data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Submit</a>
+                    -->
+
+                    <div data-role="popup" id="dlg-invalid-credentials" data-dismissible="false" style="max-width:400px;">
+                        <div role="main" class="ui-content">
+                            <h3 class="mc-text-danger">Login Failed</h3>
+                            <p>Did you enter the right credentials?</p>
+                            <div class="mc-text-center"><a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <label for="login" style="text-align: center; color:white; text-shadow:0 0 0; padding-top: 100px;">Contact Help Desk</label>
+
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a href="#" class="ui-btn ui-btn-a ui-corner-all ui-shadow" id="btn_call">Call</a><br>
+                </div>
+
+                <div class="ui-block-b">
+                    <a href="#" class="ui-btn ui-btn-a ui-corner-all ui-shadow" id="btn_email">Email</a><br>
                 </div>
             </div>
         </div>
-    </div>
 
-    <label for="login" style="text-align: center; color:white; text-shadow:0 0 0; padding-top: 100px;">Contact Help Desk</label>
 
-    <div class="ui-grid-a">
-        <div class="ui-block-a">
-            <a href="#" class="ui-btn ui-btn-a ui-corner-all ui-shadow" id="btn_call">Call</a><br>
-        </div>
-
-        <div class="ui-block-b">
-            <a href="#" class="ui-btn ui-btn-a ui-corner-all ui-shadow" id="btn_email">Email</a><br>
-        </div>
-    </div>
 </div>
 
 <div data-role="page" data-theme="a" id="defList" >
