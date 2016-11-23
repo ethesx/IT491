@@ -49,7 +49,7 @@ $(document).on('pagecreate', "#defList", function(){
         $('#myList').html(output).listview("refresh");
     };
     $(document).on("click", "#myList li" ,function (event) {
-        dataIndexSelected = $('a', this).attr('id');
+        dataIndexSelected = event.target.id;
         Utils.populateHeaderName();
     });
 });
