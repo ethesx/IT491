@@ -7,15 +7,22 @@ $(document).on('pagecreate', "#defContactInfo", function() {
         Utils.toggleInset(page);
     });
 
+    var elementArrayToSet = ['#primaryHome', '#supplementalContactPhone', '#primaryMobile', '#secondaryMobile', '#email', '#supplementalContactEmail'];
+    var responseCd = response.ContactDetails;
+    /*pass in element array to set event handler on,
+     response object's object which properties for update are contained within,
+     and the list of properties to update*/
+    $(elementArrayToSet.join(", ")).change({obj : responseCd, propsArray : elementArrayToSet}, Utils.setResponseValue);
+
     //Data population --------------------------------------------------------------------------------------
 
     var cd = data[dataIndexSelected].ContactDetails;
 
-    $('#phoneHome1').val(cd.PrimaryHome);
-    $('#phoneHome2').val(cd.SupplementalContactPhone);
-    $('#phoneMobile1').val(cd.PrimaryMobile);
-    $('#phoneMobile2').val(cd.SecondaryMobile);
-    $('#email1').val(cd.Email);
-    //TODO No secondary email available
+    $('#primaryHome').val(cd.PrimaryHome);
+    $('#supplementalContactPhone').val(cd.SupplementalContactPhone);
+    $('#primaryMobile').val(cd.PrimaryMobile);
+    $('#secondaryMobile').val(cd.SecondaryMobile);
+    $('#email').val(cd.Email);
+    $('#supplementalContactEmail').val(cd.SupplementalContactEmail);
 
 });
