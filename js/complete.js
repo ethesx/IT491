@@ -4,7 +4,7 @@
 
 $(function () {
 
-    $('').click(function(){
+    $('#proceed').click(function(){
 
         var response = "";
 
@@ -12,13 +12,16 @@ $(function () {
             type:  "POST",
             url: "https://***REMOVED***/UpdateDefendantInfo/%7BD-1250%7D",
             data: response,
+           // dataType = "json",
             success: function(data)
             {
                 alert("Interview Submitted Successfully");
+                console.log("Interview Submitted Successfully");
             },
             error: function(result)
             {
-                alert("Interview Submitted Successfully");
+                alert("The Interview Did Not Submit");
+                console.log("The Interview Did Not Submit");
             }
         }) ;
 
