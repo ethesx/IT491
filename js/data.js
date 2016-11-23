@@ -116,7 +116,8 @@ response = {
 };
 //FixME State and County data missing from CurrentAddress/AddressDetails
 //FixMe No secondary email available
-data = [
+data = [];
+data2 = [
     {
         "Case":[
             {

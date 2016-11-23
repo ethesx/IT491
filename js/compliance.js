@@ -1,8 +1,7 @@
-var controlGroupContainer = "#complianceDiv";
-var cases = data[dataIndexSelected].Case;
+$(document).on('pagecreate', "#compliance", function(){
 
-$(document).on('pagecreate', "#compliance", function(e, data){
-
+    var controlGroupContainer = "#complianceDiv";
+    var cases = data[dataIndexSelected].Case;
     var counter = 0;
 
     $.each(cases,function(index, value){

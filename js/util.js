@@ -29,5 +29,10 @@ var Utils = {
                 break;
             }
         }
+    },
+    populateHeaderName : function(){
+        var demoInfo = data[dataIndexSelected].DemographicInfo;
+        var defName = demoInfo.LastName.toLowerCase() + ', ' + demoInfo.FirstName.toLowerCase();
+        $('.headerDefendantName').text(defName);
     }
 };
