@@ -1,128 +1,61 @@
 $(document).on('pagecreate', "#defInfo", function(){
 
-    var page = '#defInfo';
-    Utils.toggleInset(page);
+    //For response json data
+    var ad2 = response.DemographicInfo;
+
     $('#infoEdit').click(function(){
-        Utils.toggleInputText(page);
-        Utils.toggleInset(page);
+        if($("#fullname").hasClass("ui-disabled")){
+            $("#fullname").removeClass('ui-disabled');
+            $("#middlename").removeClass('ui-disabled');
+            $("#lastname").removeClass('ui-disabled');
+            $("#gender").removeClass('ui-disabled');
+            $("#feet").removeClass('ui-disabled');
+            $("#inch").removeClass('ui-disabled');
+            $("#eyeColor").removeClass('ui-disabled');
+            $("#race").removeClass('ui-disabled');
+            $("#hairColor").removeClass('ui-disabled');
+            $("#inter").removeClass('ui-disabled');
+            $("#language").removeClass('ui-disabled');
+        }
+        else{
+            $("#fullname").addClass('ui-disabled');
+            ad2.FirstName = $('#fullname').val();
+
+            $("#middlename").addClass('ui-disabled');
+            ad2.MiddleName = $('#middlename').val();
+
+            $("#lastname").addClass('ui-disabled');
+            ad2.LastName = $('#lastname').val();
+
+            $("#gender").addClass('ui-disabled');
+            ad.Gender = $('#gender').val();
+
+            $("#feet").addClass('ui-disabled');
+            ad.HeightFt = $('#feet').val();
+
+            $("#inch").addClass('ui-disabled');
+            ad.HeightInches = $('#inch').val();
+
+            $("#eyeColor").addClass('ui-disabled');
+            ad.EyeColor = $('#eyeColor').val();
+
+            $("#race").addClass('ui-disabled');
+            ad.Ethnicity = $('#race').val();
+
+            $("#hairColor").addClass('ui-disabled');
+            ad.HairColor = $('#hairColor').val();
+
+            $("#inter").addClass('ui-disabled');
+            ad.InterpreterRequired = $('#inter').val();
+
+            $("#language").addClass('ui-disabled');
+            ad.SpokenLanguage = $('#language').val();
+        }
     });
-
-    /*
-
-     $('#editFull').click(function() {
-     if($("#fullname").hasClass("ui-disabled")){
-     $("#fullname").removeClass('ui-disabled');
-     }
-     else{
-     $("#fullname").addClass('ui-disabled');
-     }
-     });
-
-     $('#editMiddle').click(function() {
-     if($("#middlename").hasClass("ui-disabled")){
-     $("#middlename").removeClass('ui-disabled');
-     }
-     else{
-     $("#middlename").addClass('ui-disabled');
-     }
-     });
-
-     $('#editLast').click(function() {
-     if($("#lastname").hasClass("ui-disabled")){
-     $("#lastname").removeClass('ui-disabled');
-     }
-     else{
-     $("#lastname").addClass('ui-disabled');
-     }
-     });
-
-     $('#editGender').click(function() {
-     if($("#gender").hasClass("ui-disabled")){
-     $("#gender").removeClass('ui-disabled');
-     }
-     else{
-     $("#gender").addClass('ui-disabled');
-     }
-     });
-
-     $('#editHeight').click(function() {
-     if($("#feet").hasClass("ui-disabled")){
-     $("#feet").removeClass('ui-disabled');
-     $("#inch").removeClass('ui-disabled');
-     }
-     else{
-     $("#feet").addClass('ui-disabled');
-     $("#inch").addClass('ui-disabled');
-     }
-     });
-
-     $('#editEye').click(function() {
-     if($("#eyeColor").hasClass("ui-disabled")){
-     $("#eyeColor").removeClass('ui-disabled');
-     }
-     else{
-     $("#eyeColor").addClass('ui-disabled');
-     }
-     });
-
-     $('#editRace').click(function() {
-     if($("#race").hasClass("ui-disabled")){
-     $("#race").removeClass('ui-disabled');
-     }
-     else{
-     $("#race").addClass('ui-disabled');
-     }
-     });
-
-     $('#editHair').click(function() {
-     if($("#hairColor").hasClass("ui-disabled")){
-     $("#hairColor").removeClass('ui-disabled');
-     }
-     else{
-     $("#hairColor").addClass('ui-disabled');
-     }
-     });
-
-     $('#editInter').click(function() {
-     if($("#inter").hasClass("ui-disabled")){
-     $("#inter").removeClass('ui-disabled');
-     }
-     else{
-     $("#inter").addClass('ui-disabled');
-     }
-     });
-
-     $('#editSSN').click(function() {
-     if($("#ssn").hasClass("ui-disabled")){
-     $("#ssn").removeClass('ui-disabled');
-     }
-     else{
-     $("#ssn").addClass('ui-disabled');
-     }
-     });
-
-     $('#editLanguage').click(function() {
-     if($("#language").hasClass("ui-disabled")){
-     $("#language").removeClass('ui-disabled');
-     }
-     else{
-     $("#language").addClass('ui-disabled');
-     }
-     });
-
-     $('#editPy').click(function() {
-     if($("#py").hasClass("ui-disabled")){
-     $("#py").removeClass('ui-disabled');
-     }
-     else{
-     $("#py").addClass('ui-disabled');
-     }
-     });
-
-     */
 
     //Data population --------------------------------------------------------------------------------------
 
+    //TO get data from JSON
     var ad = data[dataIndexSelected].DemographicInfo;
     var id = data[dataIndexSelected];
 
