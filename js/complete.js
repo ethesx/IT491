@@ -42,8 +42,27 @@ $(function () {
     $( "#flip-1" ).on( 'slidestop', function( event ) {
 
         //$('#datepicker').datepicker();
-        $('#cal').toggle();
-        console.log('Popup div Calendar input with time and location parameters.');
+        var input = $('#flip-1').val();
+        alert(input);
+        if( input == "no")
+        {
+            $('#cal').hide();
+            $('#info').hide();
+        }
+        else if( input == "yes")
+        {
+            $('#cal').show();
+            $('#loc').show();
+            $('#info').hide();
+            console.log('Popup div Calendar input with time and location parameters.');
+        }
+    });
+
+    $('#schButton').click(function() {
+
+        $('#cal').hide();
+        $('#info').show();
+        //$('#flip-1').slider('disable');
     });
 
 });
