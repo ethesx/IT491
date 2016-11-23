@@ -16,6 +16,9 @@
 
 $(function () {
 
+    /* This function is invoked when the complete interview button is clicked.
+     * The is located on the summary page. Populate the variable with the page
+      * response json and post it back to the backend server. */
     $('#proceed').click(function(){
 
         var response = "";
@@ -27,8 +30,8 @@ $(function () {
            // dataType = "json",
             success: function(data)
             {
-                alert("Interview Submitted Successfully");
-                console.log("Interview Submitted Successfully");
+                alert("The Interview Submitted Successfully");
+                console.log("The Interview Submitted Successfully");
             },
             error: function(result)
             {
@@ -39,11 +42,16 @@ $(function () {
 
     });
 
+    /* This function controls the slider. At the end of the slide movment this function is invoked and the value
+    * is checked. If yes, the calendar div will display allowing the user to select the date, time, and location of
+    * the next appointment. Once the date is chosen the schedule button is clicked, the dive will display the next
+    * appointment date. If the slider is set back to no, the appointment cancels. */
+
     $( "#flip-1" ).on( 'slidestop', function( event ) {
 
         //$('#datepicker').datepicker();
         var input = $('#flip-1').val();
-        alert(input);
+        console.log('Slider Input Detected: ' + input);
         if( input == "no")
         {
             $('#cal').hide();
@@ -54,9 +62,12 @@ $(function () {
             $('#cal').show();
             $('#loc').show();
             $('#info').hide();
-            console.log('Popup div Calendar input with time and location parameters.');
+            console.log('Pop out div calendar input with time and location parameters to set next interview.');
         }
     });
+
+    /*This button takes the chosen date, time, and location, and displays it in the div. This function should also
+    populate the response json object with the new appointment/ interview details, to be posted back. */
 
     $('#schButton').click(function() {
 
