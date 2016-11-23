@@ -41,6 +41,7 @@ $(function () {
 
     $( "#flip-1" ).on( 'slidestop', function( event ) {
 
+        //$('#datepicker').datepicker();
         $('#cal').toggle();
         console.log('Popup div Calendar input with time and location parameters.');
     });
