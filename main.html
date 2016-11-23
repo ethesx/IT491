@@ -32,58 +32,64 @@
 <body >
 
 <div data-role="page" data-theme="a" id="login" >
-    <div data-role="header" class="ui-shadow">
-        <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back"></a>
-        <img border="0" src="images/state.png" alt="Logo, State" style="float:right;display:inline"/>
-        <h1><font color="#01498f">New Jersey Courts<br/>Pre-Trial Monitoring</font></h1>
+    <div data-role="header" style="height:auto;">
+
+        <img border="0" src="images/njcourtsbanner.png" alt="Logo, State" style="width:100%;max-width:414px;"/>
+        <!--<h1><font color="#01498f">New Jersey Courts<br/>Pre-Trial Monitoring</font></h1>-->
     </div>
 
     <div style="background-color: #52B480; padding:100px 50px 50px 50px;"></div>
-    <div id="wrap" style="background-color: #FFF; border-radius:25px;">
-        <div data-role="main" class="ui-content">
-            <input type="text" name="txt-email" id="txt-email" value="User ID" style="text-align: center;">
-            <input type="password" name="txt-password" id="txt-password" value="Password" style="text-align: center;">
 
-            <a href="#defList" id="btn-login" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5"style="background-color: #52B480; color:white; text-shadow:0 0 0;">Log In</a>
+        <div data-role="main" class="ui-content" >
+            <div style="background-color: #FFF; border-radius:25px;">
+                <div class="ui-content">
+                    <input type="text" name="txt-email" id="txt-email" value="User ID" style="text-align: center;">
+                    <input type="password" name="txt-password" id="txt-password" value="Password" style="text-align: center;">
 
-            <label for="txt-password" style="text-align: center; color:gray; text-shadow:0 0 0;">Forgot User ID or Password?</label>
+                    <a href="#defList" id="btn-login" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5"style="background-color: #52B480; color:white; text-shadow:0 0 0;">Log In</a>
 
-            <!--
-            <a href="#dlg-invalid-credentials" data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Submit</a>
-            -->
+                    <label for="txt-password" style="text-align: center; color:gray; text-shadow:0 0 0;">Forgot User ID or Password?</label>
 
-            <div data-role="popup" id="dlg-invalid-credentials" data-dismissible="false" style="max-width:400px;">
-                <div role="main" class="ui-content">
-                    <h3 class="mc-text-danger">Login Failed</h3>
-                    <p>Did you enter the right credentials?</p>
-                    <div class="mc-text-center"><a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+                    <!--
+                    <a href="#dlg-invalid-credentials" data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Submit</a>
+                    -->
+
+                    <div data-role="popup" id="dlg-invalid-credentials" data-dismissible="false" style="max-width:400px;">
+                        <div role="main" class="ui-content">
+                            <h3 class="mc-text-danger">Login Failed</h3>
+                            <p>Did you enter the right credentials?</p>
+                            <div class="mc-text-center"><a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <label for="login" style="text-align: center; color:white; text-shadow:0 0 0; padding-top: 100px;">Contact Help Desk</label>
+
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a href="#" class="ui-btn ui-btn-a ui-corner-all ui-shadow" id="btn_call">Call</a><br>
+                </div>
+
+                <div class="ui-block-b">
+                    <a href="#" class="ui-btn ui-btn-a ui-corner-all ui-shadow" id="btn_email">Email</a><br>
                 </div>
             </div>
         </div>
-    </div>
 
-    <label for="login" style="text-align: center; color:white; text-shadow:0 0 0; padding-top: 100px;">Contact Help Desk</label>
 
-    <div class="ui-grid-a">
-        <div class="ui-block-a">
-            <a href="#" class="ui-btn ui-btn-a ui-corner-all ui-shadow" id="btn_call">Call</a><br>
-        </div>
-
-        <div class="ui-block-b">
-            <a href="#" class="ui-btn ui-btn-a ui-corner-all ui-shadow" id="btn_email">Email</a><br>
-        </div>
-    </div>
 </div>
 
 <div data-role="page" data-theme="a" id="defList" >
     <div data-role="header"  data-position="fixed">
         <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
         <h1 class="headerDefendantName">Choose Defendant</h1>
-        <a href="#" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
+        <a href="#login" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div data-role="main" class="ui-content">
-        <p class="pageTitle">Defendant Names</p>
+        <div class="pageTitleDiv">
+            <div class="pageTitle">Defendant Names</div>
+        </div>
         <form class="ui-filterable">
             <input id="myFilter" data-type="search" placeholder="Search for names...">
         </form>
@@ -97,7 +103,7 @@
     <div data-role="header"  data-position="fixed">
         <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
         <h1 class="headerDefendantName"></h1>
-        <a href="#" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
+        <a href="#login" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div data-role="main" class="ui-content">
@@ -143,13 +149,14 @@
     <div data-role="header"  data-position="fixed">
         <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
         <h1 class="headerDefendantName"></h1>
-        <a href="#" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
+        <a href="#login" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div data-role="main" class="ui-content">
-        <p class="pageTitle">Defendant Information
-            <a href="#" id="infoEdit" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext ui-btn-inline ui-btn-right btn-edit" >Edit</a>
-        </p>
+        <div class="pageTitleDiv" >
+            <div class="pageTitle">Defendant Information</div>
+            <div class="pageTitleEditBtn"><a href="#" id="infoEdit" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext ui-btn-inline" >Edit</a></div>
+        </div>
 
         <div class="ui-body ui-body-a ui-corner-all">
             <fieldset class="ui-field-contain"><label for="fullname">First name:</label><input class="ui-disabled transparent" type="text"  name="fullname" id="fullname" value=""></fieldset>
@@ -234,14 +241,14 @@
     <div data-role="header"  data-position="fixed">
             <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
             <h1 class="headerDefendantName"></h1>
-            <a href="#" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
+            <a href="#login" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div data-role="main" class="ui-content">
-        <p class="pageTitle">Current Address
-           <a href="#" id="addrEdit" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext ui-btn-inline ui-btn-right btn-edit" >Edit</a>
-        </p>
-
+        <div class="pageTitleDiv" >
+            <div class="pageTitle">Current Address</div>
+            <div class="pageTitleEditBtn"><a href="#" id="addrEdit" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext ui-btn-inline" >Edit</a></div>
+        </div>
 
 
         <div class="ui-body ui-body-a ui-corner-all">
@@ -386,13 +393,14 @@
     <div data-role="header"  data-position="fixed">
         <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
         <h1 class="headerDefendantName"></h1>
-        <a href="#" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
+        <a href="#login" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div data-role="main" class="ui-content">
-        <p class="pageTitle">Contact Information
-            <a href="#" id="contactInfoEdit" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext ui-btn-inline ui-btn-right btn-edit" >Edit</a>
-        </p>
+        <div class="pageTitleDiv" >
+            <div class="pageTitle">Contact Information</div>
+            <div class="pageTitleEditBtn"><a href="#" id="contactInfoEdit" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext ui-btn-inline" >Edit</a></div>
+        </div>
 
         <div class="ui-body ui-body-a ui-corner-all">
 
@@ -459,12 +467,15 @@
     <div data-role="header"  data-position="fixed">
         <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
         <h1 class="headerDefendantName"></h1>
-        <a href="#" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
+        <a href="#login" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div data-role="main" class="ui-content">
-        <p class="pageTitle">Monitoring Conditions</p>
-        <p class="pageSubTitle">Please tap all non-compliant items</p>
+
+        <div class="pageTitleDiv" >
+            <div class="pageTitle">Monitoring Conditions</div>
+            <div class="pageSubTitle">Please select all non-compliant items</div>
+        </div>
 
         <!--TODO Need list of values to indicate -->
 
@@ -480,11 +491,13 @@
     <div data-role="header"  data-position="fixed">
         <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
         <h1 class="headerDefendantName"></h1>
-        <a href="#" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
+        <a href="#login" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div data-role="main" class="ui-content">
-        <p class="pageTitle">Scheduling</p>
+        <div class="pageTitleDiv" >
+            <div class="pageTitle">Scheduling</div>
+        </div>
         <div id="wrap"  class="sch" >
             <p>	<label><b>Do you need to schedule an <br>appointment for the defendant?</b></label>
                 <select name="flip-1" id="flip-1" data-role="slider">
@@ -507,12 +520,14 @@
     <div data-role="header"  data-position="fixed">
         <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
         <h1 class="headerDefendantName"></h1>
-        <a href="#" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
+        <a href="#login" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
 
     <div data-role="main" class="ui-content">
-        <p class="pageTitle">Interview Summary</p>
+        <div class="pageTitleDiv" >
+            <div class="pageTitle">Interview Summary</div>
+        </div>
 
         <div id="wrap1" class="sch">
             <p><a href="#" class="ui-btn ui-corner-all ui-icon-calendar ui-btn-icon-notext icon"></a>
@@ -547,10 +562,12 @@
     <div data-role="header"  data-position="fixed">
         <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
         <h1 class="headerDefendantName"></h1>
-        <a href="#" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
+        <a href="#login" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
     <div data-role="main" class="ui-content">
-        <p class="pageTitle">Confirmation</p>
+        <div class="pageTitleDiv" >
+            <div class="pageTitle">Confirmation</div>
+        </div>
         <div id="wrap"  class="sch" >
             Your interview with<br>
             <strong class="headerDefendantName"></strong><br>
