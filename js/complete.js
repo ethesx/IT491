@@ -21,14 +21,14 @@ $(function () {
       * response json and post it back to the backend server. */
     $('#proceed').click(function(){
 
-        var response = "";
+        //var response = "";
 
-        $.ajax( {
-            type:  "POST",
-            url: "https://***REMOVED***/UpdateDefendantInfo/%7BD-1250%7D",
+        $.post( {
+            //url: "https://***REMOVED***/UpdateDefendantInfo/" + response.pyID,
+            url : "http://localhost:8777/path/UpdateDefendantInfo/" + response.pyID,
             data: response,
-           // dataType = "json",
-            success: function(data)
+            dataType : "json",
+            success: function(resp)
             {
                 alert("The Interview Submitted Successfully");
                 console.log("The Interview Submitted Successfully\nPOST was successful.");
@@ -37,6 +37,7 @@ $(function () {
             {
                 alert("The Interview Did Not Submit\n\nDEBUG: POST was not successful. Error Detected");
                 console.log("The Interview Did Not Submit\nDEBUG: POST was not successful. Error Detected");
+
             }
         }) ;
 
