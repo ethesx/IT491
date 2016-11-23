@@ -22,6 +22,12 @@ $(document).on('pagecreate', "#defAddr", function(){
             .removeClass('ui-state-disabled');
     });*/
 
+    var elementArrayToSet = ['#address1', '#address2', '#city', '#zip'];
+    var responseAd = response.CurrentAddress;
+    /*pass in element array to set event handler on,
+     response object's object which properties for update are contained within,
+     and the list of properties to update*/
+    $(elementArrayToSet.join(", ")).change({obj : responseAd, propsArray : elementArrayToSet}, Utils.setResponseValue);
 
     //Data population --------------------------------------------------------------------------------------
 
