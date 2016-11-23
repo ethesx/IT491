@@ -499,11 +499,28 @@
                     <option value="no">NO</option>
                     <option value="yes">YES</option>
                 </select><br><br>
-        <div id="cal" style="display: none;">
-        <br>   <label><b>Select Next Appointment:</b></label>
-            <div id="dat"></div>
-            <input ype="text" id="datepicker" />
-        </div><br><br>
+
+                <div id="cal" style="display: none;">
+                <label><b>Select Next Appointment:</b></label>
+                    <div id="dat"></div>
+                    <label><b>Date</b></label>
+                        <input type="text" id="datepicker" />
+                    <label><b>Time</b></label>
+                        <input type="text" id="timepicker" />
+                    <label><b>Location</b></label>
+                        <select name="loc" id="loc">
+                            <option value="home">Home</option>
+                            <option value="office">Office</option>
+                            <option value="other">Other</option>
+                        </select><br>
+                    <button id="schButton" class="ui-btn ui-mini ui-shadow">Schedule</button><br>
+                    <br>
+                </div>
+                <div id="info" style="display: none;">
+                    <label><b>Next Appointment Scheduled for: </b></label>
+                        <span></span>
+                </div><br><br>
+
                 <label><b>Did you review the schedule with the defendant?</b></label>
                 <select name="flip-2" id="flip-2" data-role="slider">
                     <option value="no">NO</option>
