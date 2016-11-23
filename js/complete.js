@@ -9,6 +9,9 @@
  * interview. This will be saved to the object to be posted back to the database.
  *
  * Once the POST is working correctly, The confirmation page details will be displayed as a result/ PDF created.
+ *
+ * I am not totaly clear on displaying a calandar and time picker in mobile format. When I research, it seems to point
+ * to plugins such as "DateBox".
  */
 
 $(function () {
@@ -37,7 +40,9 @@ $(function () {
     });
 
     $( "#flip-1" ).on( 'slidestop', function( event ) {
-        alert('Popup Calendar with time and location parameters.');
+
+        $('#cal').toggle();
+        console.log('Popup div Calendar input with time and location parameters.');
     });
 
 });
