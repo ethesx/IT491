@@ -31,12 +31,12 @@ $(function () {
             success: function(data)
             {
                 alert("The Interview Submitted Successfully");
-                console.log("The Interview Submitted Successfully");
+                console.log("The Interview Submitted Successfully\nPOST was successful.");
             },
             error: function(result)
             {
-                alert("The Interview Did Not Submit");
-                console.log("The Interview Did Not Submit");
+                alert("The Interview Did Not Submit\n\nDEBUG: POST was not successful. Error Detected");
+                console.log("The Interview Did Not Submit\nDEBUG: POST was not successful. Error Detected");
             }
         }) ;
 
@@ -56,6 +56,7 @@ $(function () {
         {
             $('#cal').hide();
             $('#info').hide();
+            console.log('Calendar div now hidden');
         }
         else if( input == "yes")
         {
@@ -73,6 +74,7 @@ $(function () {
 
         $('#cal').hide();
         $('#info').show();
+        console.log('Calendar date, time, and location saved.');
         //$('#flip-1').slider('disable');
     });
 
