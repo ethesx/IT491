@@ -3,7 +3,10 @@
  *
  * This script is simply to create and format the current date and time to be saved to the object for display and to be
  * posted back to the database. I need to find a way to implement a better function or utilize the $this variable. The
- * date and time are showing on the summary page, but not the confirmation page. They share the same id.
+ * date and time are showing on the summary page, but not the confirmation page. They share the same id. This script
+ * could also be combined with complete.js
+ *
+ *
  */
 
 
