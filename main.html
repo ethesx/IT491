@@ -450,8 +450,23 @@
                        type="text" class="transparent ui-disabled">
 
             </div>
+            <div class="ui-field-contain">
+                <label for="notificationMode" class="select">Notification Mode:</label>
 
+                <!--TODO need list of values-->
+                <select name="notificationMode" id="notificationMode" data-native-menu="true" >
+                    <option value="">None</option>
+                    <option value="PH">Primary Home</option>
+                    <option value="SH">Secondary Home</option>
+                    <option value="SCP">Supplemental Contact Phone</option>
+                    <option value="SM">Secondary Mobile</option>
+                    <option value="PE">Primary Email</option>
+                    <option value="SCE">Supplemental Contact Email</option>
+                </select>
+            </div>
         </div>
+
+
         <a href="#compliance" class="ui-btn ui-shadow ui-corner-all footBtn">Continue</a>
     </div>
 

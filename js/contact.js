@@ -7,7 +7,7 @@ $(document).on('pagecreate', "#defContactInfo", function() {
         Utils.toggleInset(page);
     });
 
-    var elementArrayToSet = ['#primaryHome', '#supplementalContactPhone', '#primaryMobile', '#secondaryMobile', '#email', '#supplementalContactEmail'];
+    var elementArrayToSet = ['#notificationMode', '#primaryHome', '#supplementalContactPhone', '#primaryMobile', '#secondaryMobile', '#email', '#supplementalContactEmail'];
     var responseCd = response.ContactDetails;
 
     //Format phone numbers on change
@@ -31,5 +31,6 @@ $(document).on('pagecreate', "#defContactInfo", function() {
     $('#secondaryMobile').val(cd.SecondaryMobile);
     $('#email').val(cd.Email);
     $('#supplementalContactEmail').val(cd.SupplementalContactEmail);
+    $('#notificationMode').val(cd.NotificationMode);
 
 });
