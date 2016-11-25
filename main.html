@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css"/>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
-            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    <script
+            src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
             crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/util.js"></script>
@@ -474,6 +475,7 @@
 </div>
 
 <div data-role="page" data-theme="a" id="compliance" >
+
     <div data-role="header"  data-position="fixed">
         <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
         <h1 class="headerDefendantName"></h1>
@@ -485,6 +487,10 @@
         <div class="pageTitleDiv" >
             <div class="pageTitle">Monitoring Conditions</div>
             <div class="pageSubTitle">Please select all non-compliant items</div>
+            <div class="pageTitleEditBtn">
+                <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop"
+                   class="ui-btn ui-corner-all ui-icon-alert ui-btn-icon-notext ui-btn-inline" >Alerts</a>
+            </div>
         </div>
 
         <!--TODO Need list of values to indicate -->
@@ -495,7 +501,48 @@
 
         <a href="#schedule" class="ui-btn ui-shadow ui-corner-all footBtn">Continue</a>
     </div>
+
+    <div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" style="max-width:400px;">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+        <div data-role="header" data-theme="a">
+            <h1>Alerts</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <div class="ui-body ui-body-b">
+
+                <table data-role="table" class="ui-responsive" data-mode="columntoggle">
+                    <thead >
+                        <tr class="ui-bar-b">
+                            <th>Date</th>
+                            <th>Alert</th>
+                        </tr>
+                    </thead>
+                        <tbody>
+                            <tr class="ui-bar-a">
+                                <td>9/28/2016</td>
+                                <td>Alert - New case is PROMIS/Gavel matched to defendant's SBI #
+                                    County: ATL
+                                    Case #: ATL-16-000232</td>
+                            </tr>
+                            <tr class="ui-bar-a">
+                                <td>9/28/2016</td>
+                                <td>Alert - New case is PROMIS/Gavel matched to defendant's SBI #
+                                    County: ATL
+                                    Case #: ATL-16-000232</td>
+                            </tr>
+
+                        </tbody>
+                </table>
+
+
+                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-a footBtn" data-rel="back">Close</a>
+            </div>
+        </div>
+    </div>
+
 </div>
+
+
 
 <div data-role="page" data-theme="a" id="schedule" >
     <div data-role="header"  data-position="fixed">

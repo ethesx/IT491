@@ -136,5 +136,7 @@ input[type="text"]:disabled {
     }
 }
 
-
+table td{
+    color: #727272;
+}
 
