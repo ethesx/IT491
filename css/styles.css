@@ -146,26 +146,41 @@ table td{
 table .ui-bar-b, table .ui-bar-a{
     border-style:none;
 }
+
+@media (max-width:639px){
+    thead tr:first-child th:nth-child(2){
+        -moz-border-radius: 1em 0 0 0 ;
+        -webkit-border-radius: 1em 0 0 0 ;
+        border-radius: 1em 0 0 0;
+    }
+
+    tr:last-child td:nth-child(2){
+        -moz-border-radius: 0 0 0 1em ;
+        -webkit-border-radius: 0 0 0 1em ;
+        border-radius: 0 0 0 1em ;
+    }
+
+}
 thead tr:first-child th:first-child {
     -moz-border-radius: 1em 0 0 0 ;
     -webkit-border-radius: 1em 0 0 0 ;
     border-radius: 1em 0 0 0;
 }
 
-thead tr:first-child th:last-child {
-    -moz-border-radius: 0px 1em 0 0 ;
-    -webkit-border-radius: 0px 1em 0 0 ;
-    border-radius: 0px 1em 0 0 ;
+thead tr:first-child th:last-child{
+    -moz-border-radius: 0 1em 0 0 ;
+    -webkit-border-radius: 0 1em 0 0 ;
+    border-radius: 0 1em 0 0 ;
 }
 
 tr:last-child td:first-child{
-    -moz-border-radius: 0px 0px 0px 1em ;
-    -webkit-border-radius: 0px 0px 0px 1em ;
-    border-radius: 0px 0px 0px 1em ;
+    -moz-border-radius: 0 0 0 1em ;
+    -webkit-border-radius: 0 0 0 1em ;
+    border-radius: 0 0 0 1em ;
 }
 
 tr:last-child td:last-child{
-    -moz-border-radius: 0px 0px 1em 0px ;
-    -webkit-border-radius: 0px 0px 1em 0px ;
-    border-radius: 0px 0px 1em 0px ;
+    -moz-border-radius: 0 0 1em 0 ;
+    -webkit-border-radius: 0 0 1em 0 ;
+    border-radius: 0 0 1em 0 ;
 }
