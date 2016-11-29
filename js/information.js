@@ -1,3 +1,5 @@
+var ifChanged = false;
+
 $(document).on('pagecreate', "#defInfo", function(){
 
     //For response json data
@@ -18,6 +20,7 @@ $(document).on('pagecreate', "#defInfo", function(){
             $("#language").removeClass('ui-disabled');
         }
         else{
+            ifChanged = true;
             $("#fullname").addClass('ui-disabled');
             ad2.FirstName = $('#fullname').val();
 

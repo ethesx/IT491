@@ -72,11 +72,11 @@ $(function () {
     populate the response json object with the new appointment/ interview details, to be posted back. */
 
     $('#schButton').click(function() {
-
         $('#cal').hide();
         $('#info').show();
         console.log('Calendar date, time, and location saved.');
+        $('#dis-day').append($('#meeting').val());
+        $('#dis-loc').append($('#loc').val());
         //$('#flip-1').slider('disable');
     });
-
 });

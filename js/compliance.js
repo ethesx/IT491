@@ -1,3 +1,4 @@
+var globalBoolean = false;
 $(document).on('pagecreate', "#compliance", function(){
 
     var controlGroupContainer = "#complianceDiv";
@@ -39,6 +40,11 @@ $(document).on('pagecreate', "#compliance", function(){
 
         condition.IsCompliant = !$(event.target).prop("checked");
         condition.IsNonCompliant = $(event.target).prop("checked");
+
+        //globalBoolean used on Summary page to check if non-compliant
+        if(condition.IsNonCompliant == true){
+            globalBoolean = true;
+        }
 
         console.debug("IsCompliant AFTER : " + condition.IsCompliant);
         console.debug("IsNonCompliant AFTER : " + condition.IsNonCompliant);

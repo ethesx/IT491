@@ -22,6 +22,7 @@
     <script src="js/currentDate.js"></script>
     <script src="js/complete.js"></script>
     <script src="js/name.js"></script>
+    <script src="js/summary.js"></script>
 
 </head>
 
@@ -570,24 +571,18 @@
                 </select><br><br>
 
                 <div id="cal" style="display: none;">
-                <label><b>Select Next Appointment:</b></label>
-                    <div id="dat"></div>
-                    <label><b>Date</b></label>
-                        <input type="text" id="datepicker" />
-                    <label><b>Time</b></label>
-                        <input type="text" id="timepicker" />
-                    <label><b>Location</b></label>
-                        <select name="loc" id="loc">
-                            <option value="home">Home</option>
-                            <option value="office">Office</option>
-                            <option value="other">Other</option>
-                        </select><br>
-                    <button id="schButton" class="ui-btn ui-mini ui-shadow">Schedule</button><br>
-                    <br>
+                    <label for="meeting">Meeting Date : </label><input id="meeting" type="date"/>
+                    <select name="loc" id="loc">
+                        <option value="Home">Home</option>
+                        <option value="Office">Office</option>
+                        <option value="Other">Other</option>
+                    </select><br>
+                    <input type="submit" id="schButton" value="Schedule" class="ui-btn ui-btn-a ui-corner-all footBtn"/>
                 </div>
                 <div id="info" style="display: none;">
                     <label><b>Next Appointment Scheduled for: </b></label>
-                        <span></span>
+                        <div id="dis-day"></div>
+                        <div id="dis-loc"></div>
                 </div><br><br>
 
                 <label><b>Did you review the schedule with the defendant?</b></label>
@@ -623,19 +618,19 @@
         <div id="wrap2"  class="sch">
             <p><a href="#" class="ui-btn ui-corner-all ui-icon-location ui-btn-icon-notext icon"></a>
                 Schedule Interview Type<br>
-                <b style="color:black;" >Office Visit</b><br>
+            <span id="int-type" style="font-weight: bold; color: black"></span><br>
             </p>
         </div>
         <div id="wrap3"  class="sch">
             <p><a href="#" class="ui-btn ui-corner-all ui-icon-user ui-btn-icon-notext icon"></a>
                 Has The Defendant's Information Changed?<br>
-                <b style="color:black;" >YES</b><br>
+                <span id="int-change" style="font-weight: bold; color: black"></span><br>
             </p>
         </div>
         <div id="wrap4"  class="sch">
             <p><a href="#" class="ui-btn ui-corner-all ui-icon-alert ui-btn-icon-notext icon"></a>
                 Was The Defendant Non-Compliant With Any Conditions?<br>
-                <b style="color:black;" >NO</b><br>
+                <span id="int-compliant" style="font-weight: bold; color: black"></span><br>
             </p>
         </div>
 
