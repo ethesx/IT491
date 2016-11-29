@@ -2,6 +2,8 @@ var ifChanged = false;
 
 $(document).on('pagecreate', "#defInfo", function(){
 
+    Utils.toggleInset("#defInfo");
+
     //For response json data
     var ad2 = response.DemographicInfo;
 
