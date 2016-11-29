@@ -31,66 +31,11 @@
 
 <body >
 
-<div data-role="page" data-theme="a" id="login" >
-    <div data-role="header" style="height:auto;">
-
-        <img border="0" src="images/njcourtsbanner.png" alt="Logo, State" style="width:100%;max-width:414px;"/>
-        <!--<h1><font color="#01498f">New Jersey Courts<br/>Pre-Trial Monitoring</font></h1>-->
-    </div>
-
-
-        <div data-role="main" class="ui-content" >
-
-            <div class="pageTitleDiv" style="padding-bottom:50px;">
-                <div class="pageTitle">Pretrial Monitoring</div>
-            </div>
-
-            <div style="background-color: #FFF; border-radius:25px;">
-                <div class="ui-content">
-                    <input type="text" name="txt-email" id="txt-email" value="User ID" style="text-align: center;">
-                    <input type="password" name="txt-password" id="txt-password" value="Password" style="text-align: center;">
-
-                    <a href="#defList" id="btn-login" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5"style="background-color: #52B480; color:white; text-shadow:0 0 0;">Log In</a>
-
-                    <label for="txt-password" style="text-align: center; color:gray; text-shadow:0 0 0;">Forgot User ID or Password?</label>
-
-                    <!--
-                    <a href="#dlg-invalid-credentials" data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Submit</a>
-                    -->
-
-                    <div data-role="popup" id="dlg-invalid-credentials" data-dismissible="false" style="max-width:400px;">
-                        <div role="main" class="ui-content">
-                            <h3 class="mc-text-danger">Login Failed</h3>
-                            <p>Did you enter the right credentials?</p>
-                            <div class="mc-text-center"><a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-        <div style="position:absolute;bottom:0;width:100%;">
-            <p style="text-align: center">Contact Help Desk</p>
-            <div class="ui-grid-a" style="position:relative">
-                <div class="ui-block-a">
-                    <a href="tel:+15551212" class="ui-btn ui-btn-a ui-corner-all ui-shadow ui-icon-phone ui-btn-icon-left" id="btn_call">Call</a><br>
-                </div>
-
-                <div class="ui-block-b">
-                    <a href="mailto:helpdesk@xyz.com" class="ui-btn ui-btn-a ui-corner-all ui-shadow ui-icon-mail ui-btn-icon-left" id="btn_email">Email</a><br>
-                </div>
-            </div>
-        </div>
-
-
-</div>
-
 <div data-role="page" data-theme="a" id="defList" >
     <div data-role="header"  data-position="fixed">
         <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
         <h1>Choose Defendant</h1>
-        <a href="#login" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
+        <a href="index.html" data-ajax="false" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div data-role="main" class="ui-content">
@@ -110,7 +55,7 @@
     <div data-role="header"  data-position="fixed">
         <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
         <h1 class="headerDefendantName"></h1>
-        <a href="#login" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
+        <a href="index.html" data-ajax="false" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div data-role="main" class="ui-content">
@@ -156,7 +101,7 @@
     <div data-role="header"  data-position="fixed">
         <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
         <h1 class="headerDefendantName"></h1>
-        <a href="#login" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
+        <a href="index.html" data-ajax="false" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div data-role="main" class="ui-content">
@@ -248,7 +193,7 @@
     <div data-role="header"  data-position="fixed">
             <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
             <h1 class="headerDefendantName"></h1>
-            <a href="#login" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
+            <a href="index.html" data-ajax="false" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div data-role="main" class="ui-content">
@@ -400,7 +345,7 @@
     <div data-role="header"  data-position="fixed">
         <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
         <h1 class="headerDefendantName"></h1>
-        <a href="#login" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
+        <a href="index.html" data-ajax="false" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div data-role="main" class="ui-content">
@@ -484,7 +429,7 @@
     <div data-role="header"  data-position="fixed">
         <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
         <h1 class="headerDefendantName"></h1>
-        <a href="#login" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
+        <a href="index.html" data-ajax="false" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div data-role="main" class="ui-content">
@@ -553,7 +498,7 @@
     <div data-role="header"  data-position="fixed">
         <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
         <h1 class="headerDefendantName"></h1>
-        <a href="#login" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
+        <a href="index.html" data-ajax="false" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
     <div data-role="main" class="ui-content">
@@ -597,7 +542,7 @@
     <div data-role="header"  data-position="fixed">
         <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
         <h1 class="headerDefendantName"></h1>
-        <a href="#login" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
+        <a href="index.html" data-ajax="false" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
 
 
@@ -639,7 +584,7 @@
     <div data-role="header"  data-position="fixed">
         <a href="#" data-rel="back" class="ui-btn-left ui-btn  ui-btn-icon-notext ui-corner-all ui-icon-back headBtn">Back</a>
         <h1 class="headerDefendantName"></h1>
-        <a href="#login" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
+        <a href="index.html" data-ajax="false" class="ui-btn-right ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars headBtn">Menu</a>
     </div>
     <div data-role="main" class="ui-content">
         <div class="pageTitleDiv" >
@@ -650,8 +595,8 @@
             <strong class="headerDefendantName"></strong><br>
             has been completed on<br> <span id="date"></span>
         </div>
-        <a href="#defList" class="ui-btn ui-btn-a ui-corner-all footBtn">Return to Defendant List</a>
-        <a href="main.html" class="ui-btn ui-btn-a ui-corner-all footBtn">Logout</a>
+        <a href="main.html" data-ajax="false" class="ui-btn ui-btn-a ui-corner-all footBtn">Return to Defendant List</a>
+        <a href="index.html" data-ajax="false" class="ui-btn ui-btn-a ui-corner-all footBtn">Logout</a>
     </div>
 </div>
 </body>

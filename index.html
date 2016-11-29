@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="themes/handrolled.min.css"/>
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css"/>
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body >
+
+<div data-role="page" data-theme="a" id="login" >
+    <div data-role="header" style="height:auto;">
+
+        <img border="0" src="images/njcourtsbanner.png" alt="Logo, State" style="width:100%;max-width:414px;"/>
+        <!--<h1><font color="#01498f">New Jersey Courts<br/>Pre-Trial Monitoring</font></h1>-->
+    </div>
+
+
+    <div data-role="main" class="ui-content" >
+
+        <div class="pageTitleDiv" style="padding-bottom:50px;">
+            <div class="pageTitle">Pretrial Monitoring</div>
+        </div>
+
+        <div style="background-color: #FFF; border-radius:25px;">
+            <div class="ui-content">
+                <input type="text" name="txt-email" id="txt-email" value="User ID" style="text-align: center;">
+                <input type="password" name="txt-password" id="txt-password" value="Password" style="text-align: center;">
+
+                <a href="main.html" rel="external" id="btn-login" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5"style="background-color: #52B480; color:white; text-shadow:0 0 0;">Log In</a>
+
+                <label for="txt-password" style="text-align: center; color:gray; text-shadow:0 0 0;">Forgot User ID or Password?</label>
+
+                <!--
+                <a href="#dlg-invalid-credentials" data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Submit</a>
+                -->
+
+                <div data-role="popup" id="dlg-invalid-credentials" data-dismissible="false" style="max-width:400px;">
+                    <div role="main" class="ui-content">
+                        <h3 class="mc-text-danger">Login Failed</h3>
+                        <p>Did you enter the right credentials?</p>
+                        <div class="mc-text-center"><a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div style="position:absolute;bottom:0;width:100%;">
+        <p style="text-align: center">Contact Help Desk</p>
+        <div class="ui-grid-a" style="position:relative">
+            <div class="ui-block-a">
+                <a href="tel:+17325551212" class="ui-btn ui-btn-a ui-corner-all ui-shadow ui-icon-phone ui-btn-icon-left" id="btn_call">Call</a><br>
+            </div>
+
+            <div class="ui-block-b">
+                <a href="mailto:helpdesk@xyz.com" class="ui-btn ui-btn-a ui-corner-all ui-shadow ui-icon-mail ui-btn-icon-left" id="btn_email">Email</a><br>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>
