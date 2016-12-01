@@ -76,6 +76,7 @@ $(function () {
         $('#info').show();
         console.log('Calendar date, time, and location saved.');
         $('#dis-day').append($('#meeting').val());
+        $('#dis-time').append($('#timepicker').val());
         $('#dis-loc').append($('#loc').val());
         //$('#flip-1').slider('disable');
     });

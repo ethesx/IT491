@@ -8,6 +8,7 @@ $(document).on('pagecreate', "#defInfo", function(){
     var ad2 = response.DemographicInfo;
 
     $('#infoEdit').click(function(){
+        Utils.toggleInset("#defInfo");
         if($("#fullname").hasClass("ui-disabled")){
             $("#fullname").removeClass('ui-disabled');
             $("#middlename").removeClass('ui-disabled');
